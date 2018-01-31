@@ -1,4 +1,6 @@
 <ion-header>
+  <script src="maps.js">
+  </script>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -10,8 +12,10 @@
 <ion-content padding>
   <h3>Welcome to portable train map</h3>
 
-  
 
   <button ion-button secondary menuToggle>Start</button>
-  <div id="map" style="width:400px;height:400px;background:rgb(0, 0, 0)"><p>Map area</p></div>
+  <p>Map area</p>
+ 
+    <div class="googleMaps" style="width:400px;height:400px;background:rgb(0, 0, 0)"></div>
+  
 </ion-content>
