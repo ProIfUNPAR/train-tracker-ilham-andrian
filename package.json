@@ -54,6 +54,8 @@
         "PLAY_SERVICES_VERSION": "11.8.+"
       }
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   }
 }
