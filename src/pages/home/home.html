@@ -10,12 +10,26 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Welcome to portable train map</h3>
+  <h3 style="font-size:18px;margin-left:5%">Welcome to Portable Train Map</h3>
 
+  <ion-item>
+    <ion-label color="primary" stacked>Departure Station</ion-label>
+    <ion-input type="text" placeholder="Enter Location"></ion-input>
+  </ion-item>
 
-  <button ion-button secondary menuToggle>Start</button>
-  <p>Map area</p>
- 
-    <div class="googleMaps" style="width:400px;height:400px;background:rgb(0, 0, 0)"></div>
+  <ion-item>
+    <ion-label color="primary" stacked>Arrival Station</ion-label>
+    <ion-input type="text" placeholder="Enter Location"></ion-input>
+  </ion-item>
+
+   <button ion-button icon-only  style="float: right;width: 100px;">
+    <ion-icon name="search" ></ion-icon><p style="margin-right:10%">search</p>
+  </button> 
+
+  <div id="map" style="width:400px;height:400px;background:rgb(0, 0, 0);margin-top:50px">
+    <p>Map area</p>
+  </div>
+
+  
   
 </ion-content>
