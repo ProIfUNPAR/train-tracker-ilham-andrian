@@ -1,35 +1,34 @@
 <ion-header>
-  <script src="maps.js">
-  </script>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Home</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3 style="font-size:18px">Welcome to portable train map</h3>
+  <h3>See Your Train Route</h3>
 
-  <ion-item>
-    <ion-label color="primary" stacked>Departure Station</ion-label>
-    <ion-input type="text" placeholder="Enter Location"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label color="primary" stacked>Arrival Station</ion-label>
-    <ion-input type="text" placeholder="Enter Location"></ion-input>
-  </ion-item>
-
-   <button ion-button icon-only  style="float: right;width: 100px;">
-    <ion-icon name="search" ></ion-icon><p style="margin-right:10%">search</p>
-  </button> 
-
-  <div id="map" style="width:400px;height:400px;background:rgb(0, 0, 0);margin-top:50px">
-    <p>Map area</p>
-  </div>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form>
+            <ion-item>
+              <ion-label color="primary" stacked>Departure Station</ion-label>
+              <ion-input type="text" placeholder="Enter Location"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>Arrival Station</ion-label>
+              <ion-input type="text" placeholder="Enter Location"></ion-input>
+            </ion-item>
+            <button ion-button round style="float:right">search</button> 
+          </form>
+        </ion-list>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   
-  
+	
+
+  <div style="height: 100%" id="map_canvas"></div> 
+
 </ion-content>

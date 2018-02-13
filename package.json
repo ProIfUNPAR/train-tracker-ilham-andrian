@@ -23,6 +23,7 @@
     "@ionic-native/camera": "^4.5.3",
     "@ionic-native/core": "^4.5.3",
     "@ionic-native/geolocation": "^4.5.3",
+    "@ionic-native/core": "4.4.0",
     "@ionic-native/google-maps": "^4.5.3",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/status-bar": "4.4.0",
@@ -32,9 +33,11 @@
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-googlemaps": "^2.2.2",
+    "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-googlemaps": "^2.2.3",
     "cordova-plugin-ionic-webview": "^1.1.16",
-    "cordova-plugin-splashscreen": "^4.0.3",
-    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-splashscreen": "^4.1.0",
+    "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.2",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
@@ -55,7 +58,8 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyBDOoNhsd3U1fbtjq0xwfcm6NvZbH-2bDM",
+        "API_KEY_FOR_ANDROID": "AIzaSyCkrI9deRYrJmiVZuLab5Tqk2EYFcEL3kc",
+        "API_KEY_FOR_IOS": "not yet",
         "PLAY_SERVICES_VERSION": "11.8.+"
       },
       "cordova-plugin-geolocation": {
