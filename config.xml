@@ -88,4 +88,8 @@
         <variable name="API_KEY_FOR_IOS" value="not yet" />
         <variable name="PLAY_SERVICES_VERSION" value="11.8.+" />
     </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
+    </plugin>
+    <plugin name="cordova-plugin-camera" spec="^4.0.2" />
 </widget>
