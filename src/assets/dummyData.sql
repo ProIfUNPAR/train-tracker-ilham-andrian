@@ -1,0 +1,2 @@
+CREATE TABLE mapKereta(idKereta INTEGER PRIMARY KEY,namaKereta TEXT,jalurKereta TEXT,depotKereta TEXT);
+insert into mapKereta(idKereta,namaKereta,jalurKereta,depotKereta)values('1','Argo Bromo Anggrek','Gambir - Surabaya Pasar Turi','Surabaya Pasar Turi (SBI)');
