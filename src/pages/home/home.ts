@@ -26,9 +26,13 @@ export class HomePage {
   //private geolocation: Geolocation
   //private camera: Camera
   map: GoogleMap;
-  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps) {}
+
+
+  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps) { 
+
+  }
   //camera
-  const options: CameraOptions = {
+  options: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
@@ -78,6 +82,9 @@ export class HomePage {
 
       });
   }
+
+
+
 }
 
 /* GEO LOCATION ERROR getCurrentPosition not found
