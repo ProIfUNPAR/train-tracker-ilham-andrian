@@ -13,10 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatabaseProvider } from '../providers/database/database';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 
-import { HttpModule } from '@angular/http';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
-import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAzbhP94h9kYX3Qk9KqP_B2BTTATVl3hyY",
@@ -37,9 +34,6 @@ const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -55,9 +49,7 @@ const firebaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseProvider,
-    FirebaseServiceProvider,
-    FirebaseProvider,
-    FirebaseServiceProvider
+    FirebaseProvider
   ]
 })
 export class AppModule {}

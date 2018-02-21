@@ -1,11 +1,12 @@
 import { HttpModule } from '@angular/http';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { FirebaseServiceProvider } from './../../providers/firebase-service/firebase-service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker } from '@ionic-native/google-maps';
-
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @NgModule({
   imports: [HttpModule]
@@ -28,18 +29,26 @@ export class HomePage {
   map: GoogleMap;
 
 
-  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps) { 
+  ///
 
+  trainData: FirebaseListObservable<any[]>;
+  newItem = '';
+  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider) {
+    this.trainData = this.firebaseService.getTrainList();
+   }
+  addItem(){
+    this.firebaseService.addItem(this.newItem);
   }
+  removeItem(id){
+    this.firebaseService.removeItem(id);
+  }
+  
   //camera
   options: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
-
-
-
   }
   ionViewDidLoad() {
     this.loadMap();
