@@ -5,10 +5,7 @@ import { FirebaseServiceProvider } from './../../providers/firebase-service/fire
 import { FirebaseListObservable } from 'angularfire2/database';
 
 /**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ *new bug,unsuported plugin angularFire and firebase
  */
 
 @IonicPage()
