@@ -27,6 +27,8 @@ export class HomePage {
   //private geolocation: Geolocation
   //private camera: Camera
   map: GoogleMap;
+
+
   ///
 
   trainData: FirebaseListObservable<any[]>;
@@ -89,6 +91,9 @@ export class HomePage {
 
       });
   }
+
+
+
 }
 
 /* GEO LOCATION ERROR getCurrentPosition not found
