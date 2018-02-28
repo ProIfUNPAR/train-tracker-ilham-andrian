@@ -1,12 +1,14 @@
 import { HttpModule } from '@angular/http';
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController, Platform } from 'ionic-angular';
 import { FirebaseServiceProvider } from './../../providers/firebase-service/firebase-service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker } from '@ionic-native/google-maps';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 
 @NgModule({
   imports: [HttpModule]
@@ -33,8 +35,20 @@ export class HomePage {
 
   trainData: FirebaseListObservable<any[]>;
   newItem = '';
-  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider) {
+  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     this.trainData = this.firebaseService.getTrainList();
+    
+    this.plt.ready().then((rdy)=>{
+      this.localNotifications.on('click',(notification,state)=>{
+        let json=JSON.parse(notification.data);
+
+        let alert=this.alertCtrl.create({
+          title: notification.title,
+          subTitle: json.myData
+        });
+        alert.present();
+      });
+    });
    }
   addItem(){
     this.firebaseService.addItem(this.newItem);
@@ -92,7 +106,16 @@ export class HomePage {
       });
   }
 
-
+  scheduleNotification(){
+    console.log("Notif keluar!!");
+    this.localNotifications.schedule({
+      id: 1,
+      title: 'Attention',
+      text: 'Ilham Notifications',
+      at: new Date(new Date().getTime() + 5*1000),
+      data: {myData : 'Notifnya udah keluar belum ?'}
+    });
+  }
 
 }
 

@@ -19,6 +19,8 @@ import { AngularFireModule } from 'angularfire2';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 import { FirebaseserviceProvider } from '../providers/firebaseservice/firebaseservice';
 
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 const firebaseConfig = {
   apiKey: "AIzaSyAzbhP94h9kYX3Qk9KqP_B2BTTATVl3hyY",
   authDomain: "proif-1517362128536.firebaseapp.com",
@@ -54,6 +56,7 @@ const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseProvider,
     FirebaseServiceProvider,
