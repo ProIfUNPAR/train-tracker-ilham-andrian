@@ -6,8 +6,10 @@ import { FirebaseServiceProvider } from './../../providers/firebase-service/fire
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker } from '@ionic-native/google-maps';
-import { FirebaseListObservable } from 'angularfire2/database';
+//import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireObject } from 'angularfire2/database';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { AngularFireList } from 'angularfire2/database/interfaces';
 
 
 @NgModule({
@@ -33,7 +35,7 @@ export class HomePage {
 
   ///
 
-  trainData: FirebaseListObservable<any[]>;
+  trainData: AngularFireList<any[]>;
   newItem = '';
   constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     this.trainData = this.firebaseService.getTrainList();
