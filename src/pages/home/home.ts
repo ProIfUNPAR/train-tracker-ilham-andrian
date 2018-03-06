@@ -1,11 +1,11 @@
 import { HttpModule } from '@angular/http';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Component } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, AlertController, Platform } from 'ionic-angular';
 import { FirebaseServiceProvider } from './../../providers/firebase-service/firebase-service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker } from '@ionic-native/google-maps';
+import { GoogleMaps, GoogleMap, CameraPosition, LatLng, GoogleMapsEvent, Marker, MarkerOptions, ILatLng } from '@ionic-native/google-maps';
 //import { FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireObject } from 'angularfire2/database';
 import { LocalNotifications } from '@ionic-native/local-notifications';
@@ -30,35 +30,36 @@ export class HomePage {
   // 2 error construction signature  
   //private geolocation: Geolocation
   //private camera: Camera
+  @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
-
 
   ///
 
   trainData: AngularFireList<any[]>;
   newItem = '';
-  constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, private camera: Camera, private _googleMaps: GoogleMaps,
+    private _geoLoc: Geolocation, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     this.trainData = this.firebaseService.getTrainList();
-    
-    this.plt.ready().then((rdy)=>{
-      this.localNotifications.on('click',(notification,state)=>{
-        let json=JSON.parse(notification.data);
 
-        let alert=this.alertCtrl.create({
+    this.plt.ready().then((rdy) => {
+      this.localNotifications.on('click', (notification, state) => {
+        let json = JSON.parse(notification.data);
+
+        let alert = this.alertCtrl.create({
           title: notification.title,
           subTitle: json.myData
         });
         alert.present();
       });
     });
-   }
-  addItem(){
+  }
+  addItem() {
     this.firebaseService.addItem(this.newItem);
   }
-  removeItem(id){
+  removeItem(id) {
     this.firebaseService.removeItem(id);
   }
-  
+
   //camera
   options: CameraOptions = {
     quality: 100,
@@ -67,55 +68,72 @@ export class HomePage {
     mediaType: this.camera.MediaType.PICTURE
   }
   ionViewDidLoad() {
+    let loc: LatLng;
     this.loadMap();
-  }
+    
+    this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
+      //Get User location
+      this.getLocation().then(res => {
+        //Once location is gotten, we set the location on the camera.
+        loc = new LatLng(res.coords.latitude, res.coords.longitude);
+        this.moveCamera(loc);
 
-  loadMap() {
-    let mapOptions: GoogleMapOptions = {
-      camera: {
-        target: {
-          lat: 43.0741904,
-          lng: -89.3809802
-        },
-        zoom: 18,
-        tilt: 30
-      }
-    };
-    this.map = this.googleMaps.create('map_canvas', mapOptions);
+        this.createMarker(loc, "Me").then((marker: Marker) => {
+          marker.showInfoWindow();
+        }).catch(err => {
+          console.log(err);
+        });
 
-    // Wait the MAP_READY before using any methods.
-    this.map.one(GoogleMapsEvent.MAP_READY)
-      .then(() => {
-        console.log('Map is ready!');
-
-        // Now you can use all methods safely.
-        this.map.addMarker({
-          title: 'Ionic',
-          icon: 'blue',
-          animation: 'DROP',
-          position: {
-            lat: 43.0741904,
-            lng: -89.3809802
-          }
-        })
-          .then(marker => {
-            marker.on(GoogleMapsEvent.MARKER_CLICK)
-              .subscribe(() => {
-                alert('clicked');
-              });
-          });
-
+      }).catch(err => {
+        console.log(err);
       });
+
+    });
   }
 
-  scheduleNotification(){
+  //Load the map 
+  loadMap() {
+    let element = this.mapElement.nativeElement;
+    this.map = this._googleMaps.create(element)
+  }
+
+  //Get current user location
+  //Returns promise
+  getLocation() {
+    return this._geoLoc.getCurrentPosition();
+  }
+
+
+  //Moves the camera to any location
+  moveCamera(loc: LatLng) {
+    let options: CameraPosition<ILatLng> = {
+      //specify center of map
+      target: loc,
+      zoom: 25,
+      tilt: 10
+    }
+    this.map.moveCamera(options)
+  }
+
+  //Adds a marker to the map
+  createMarker(loc: LatLng, title: string) {
+    let markerOptions: MarkerOptions = {
+      position: loc,
+      title: title
+    };
+
+    return this.map.addMarker(markerOptions);
+  }
+
+
+  scheduleNotification() {
     console.log("Notif keluar!!");
     this.localNotifications.schedule({
       id: 1,
       title: 'Attention',
       text: 'Ilham Notifications',
-      at: new Date(new Date().getTime() + 5*1000),
-      data: {myData : 'Notifnya udah keluar belum ?'}
+      at: new Date(new Date().getTime() + 5 * 1000),
+      data: { myData: 'Notifnya udah keluar belum ?' }
     });
   }
 
