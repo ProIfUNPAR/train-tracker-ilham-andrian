@@ -61,12 +61,12 @@ export class HomePage {
   }
 
   //camera
-  options: CameraOptions = {
-    quality: 100,
-    destinationType: this.camera.DestinationType.DATA_URL,
-    encodingType: this.camera.EncodingType.JPEG,
-    mediaType: this.camera.MediaType.PICTURE
-  }
+  //options: CameraOptions = {
+  //  quality: 100,
+  //  destinationType: this.camera.DestinationType.DATA_URL,
+  //  encodingType: this.camera.EncodingType.JPEG,
+  //  mediaType: this.camera.MediaType.PICTURE
+  //}
   ionViewDidLoad() {
     let loc: LatLng;
     this.loadMap();
