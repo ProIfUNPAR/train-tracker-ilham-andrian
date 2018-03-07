@@ -1,5 +1,5 @@
 import { HttpModule } from '@angular/http';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Component } from '@angular/core';
 import { NavController, AlertController, Platform } from 'ionic-angular';
 import { FirebaseServiceProvider } from './../../providers/firebase-service/firebase-service';
@@ -39,26 +39,36 @@ export class HomePage {
   newItem = '';
   constructor(public navCtrl: NavController, private camera: Camera, private googleMaps: GoogleMaps, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     this.trainData = this.firebaseService.getTrainList();
-    
-    this.plt.ready().then((rdy)=>{
-      this.localNotifications.on('click',(notification,state)=>{
-        let json=JSON.parse(notification.data);
 
-        let alert=this.alertCtrl.create({
+    this.plt.ready().then((rdy) => {
+      this.localNotifications.on('click', (notification, state) => {
+        let json = JSON.parse(notification.data);
+
+        let alert = this.alertCtrl.create({
           title: notification.title,
           subTitle: json.myData
         });
         alert.present();
       });
     });
-   }
-  addItem(){
+  }
+  addItem() {
     this.firebaseService.addItem(this.newItem);
   }
-  removeItem(id){
+  removeItem(id) {
     this.firebaseService.removeItem(id);
   }
-  
+
+  isSelected() {
+    var data1 = document.getElementById("#Data1");
+    var selected = document.getElementById("select-text");
+    var current = document.getElementById("fromID");
+    var destination = document.getElementById("toId");
+    if (data1.getAttribute == selected.getAttribute) {
+      document.getElementById("fromID").innerHTML = "data1";
+    }
+  }
+
   //camera
   options: CameraOptions = {
     quality: 100,
@@ -108,14 +118,14 @@ export class HomePage {
       });
   }
 
-  scheduleNotification(){
+  scheduleNotification() {
     console.log("Notif keluar!!");
     this.localNotifications.schedule({
       id: 1,
       title: 'Attention',
       text: 'Ilham Notifications',
-      at: new Date(new Date().getTime() + 5*1000),
-      data: {myData : 'Notifnya udah keluar belum ?'}
+      at: new Date(new Date().getTime() + 5 * 1000),
+      data: { myData: 'Notifnya udah keluar belum ?' }
     });
   }
 

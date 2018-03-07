@@ -34,12 +34,13 @@
     "@ionic/storage": "2.1.3",
     "angularfire": "^2.3.0",
     "angularfire2": "^5.0.0-rc.3",
-    "cordova-android": "^7.0.0",
+    "cordova-android": "7.0.0",
+    "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-camera": "^4.0.2",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-firebase": "^0.1.25",
     "cordova-plugin-geolocation": "^4.0.1",
-    "cordova-plugin-googlemaps": "^2.2.3",
+    "cordova-plugin-googlemaps": "^2.2.5",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-local-notification": "^0.9.0-beta.2",
     "cordova-plugin-splashscreen": "^4.1.0",
@@ -68,7 +69,8 @@
       "cordova-plugin-googlemaps": {
         "API_KEY_FOR_ANDROID": "AIzaSyCkrI9deRYrJmiVZuLab5Tqk2EYFcEL3kc",
         "API_KEY_FOR_IOS": "not yet",
-        "PLAY_SERVICES_VERSION": "11.8.+"
+        "PLAY_SERVICES_VERSION": "11.8.+",
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.0"
       },
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
