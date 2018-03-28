@@ -7,33 +7,45 @@
 <ion-content padding>
   <h3>See Your Train Route</h3>
 
-  <ion-item>
-    <ion-label color="primary" stacked >Select Name Train</ion-label>
-   
-    <ion-select>
-      <ion-option id="Data1" >Argo Bromo Anggrek</ion-option>
-      <ion-option id="Data2">Argo Parahyangan</ion-option>
-      <ion-option id="Data3">Argo Jati</ion-option>
-    </ion-select>
-  </ion-item>
+  <!--        -->
 
+  <div>
+    <ion-item>
+      <ion-label>State</ion-label>
+      <ion-select (ionChange)="setDistrictValues(sState)" [(ngModel)]="sState">
+        <ion-option [value]="sState" *ngFor="let sState of states">{{sState.name}} </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="selectedDistricts">
+      <ion-label>District</ion-label>
+      <ion-select (ionChange)="setCityValues(sDistrict)" [(ngModel)]="sDistrict">
+        <ion-option [value]="sDistrict" *ngFor="let sDistrict of selectedDistricts">{{sDistrict.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-list *ngIf="selectedCities">
+        <p>Destination</p>
+      <ion-item *ngFor="let city of selectedCities">
+        
+        <p>{{city.name}}</p>
+       
+      </ion-item>
+    
+    </ion-list>
 
+    <!--            -->
 
-  <p>
-    <ion-label>From</ion-label>
-    <ion-label id="formId" ></ion-label>
-    <ion-label>To</ion-label>
-    <ion-label id="toId"></ion-label>
-  </p>
+    <!--            -->
+
+  </div>
 
 
   <button ion-button full (click)="scheduleNotification()">Notifications</button>
 
-  <button ion-button round style="float:right" onclick="isSelected()" >search</button>
+  <button ion-button round style="float:right" onclick="isSelected()">search</button>
 
 
 
   <div #map id="map" style="height:100%"></div>
 
-  
+
 </ion-content>

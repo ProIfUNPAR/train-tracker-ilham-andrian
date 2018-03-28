@@ -25,23 +25,34 @@ import { AngularFireList } from 'angularfire2/database/interfaces';
   providers: [Camera, GoogleMaps]
 })
 
-//export class AppModule {}
 
 export class HomePage {
-  // 2 error construction signature  
-  //private geolocation: Geolocation
-  //private camera: Camera
+  //-----hardcode---------//
+  public states: any[];
+  public districts: any[];
+  public cities: any[];
+
+  public selectedDistricts: any[];
+  public selectedCities: any[];
+
+  public sState: any;
+  public sDistrict: any;
+  //-----map-------------//
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
-
-  ///
-
+  //-------firebase----------//
   trainData: AngularFireList<any[]>;
   newItem = '';
+  appName = 'Ionic App';
   constructor(public navCtrl: NavController, private camera: Camera, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
+    //------hardcode----//
+    this.initializeState();
+    this.initializeDistrict();
+    this.initializeCity();
+    //------firebase----//  
     this.trainData = this.firebaseService.getTrainList();
-
+    //----notification----//
     this.plt.ready().then((rdy) => {
       this.localNotifications.on('click', (notification, state) => {
         let json = JSON.parse(notification.data);
@@ -54,34 +65,67 @@ export class HomePage {
       });
     });
   }
+
   addItem() {
     this.firebaseService.addItem(this.newItem);
   }
+
   removeItem(id) {
     this.firebaseService.removeItem(id);
   }
 
-  isSelected() {
-    var data1 = document.getElementById("#Data1");
-    var selected = document.getElementById("select-text");
-    var current = document.getElementById("fromID");
-    var destination = document.getElementById("toId");
-    if (data1.getAttribute == selected.getAttribute) {
-      document.getElementById("fromID").innerHTML = "data1";
-    }
+  //----hardcode method----//
+
+  initializeState() {
+    this.states = [
+      { id: 1, name: 'Argo Parahyangan' },
+      { id: 2, name: 'Argo Jati' },
+      { id: 3, name: 'Harina' },
+      { id: 4, name: 'Lodaya' },
+      { id: 5, name: 'Ciremai' },
+      { id: 6, name: 'Malabar' },
+    ];
   }
 
-  //camera
-  //options: CameraOptions = {
-  //  quality: 100,
-  //  destinationType: this.camera.DestinationType.DATA_URL,
-  //  encodingType: this.camera.EncodingType.JPEG,
-  //  mediaType: this.camera.MediaType.PICTURE
-  //}
+  initializeDistrict(){
+    this.districts = [
+        {id: 1, name: 'Argo Parahyangan', state_id: 1, state_name: 'Melaka'},
+        {id: 2, name: 'Argo Jati', state_id: 1, state_name: 'Melaka'},
+        {id: 3, name: 'Harina', state_id: 2, state_name: 'Johor'},
+        {id: 4, name: 'Lodaya', state_id: 2, state_name: 'Johor'},
+        {id: 5, name: 'Ciremai', state_id: 3, state_name: 'Selangor'},
+        {id: 7, name: 'Malabar', state_id: 3, state_name: 'Selangor'}
+    ];
+    }
+
+    initializeCity(){
+      this.cities = [
+          {id: 1, name: 'Bandung',latitude: '-6.92501694', longitude:'107.64641998',state_id: 1, district_id: 1},
+          {id: 2, name: 'Jakarta',latitude: '-6.1767728', longitude:'106.8306364', state_id: 1, district_id: 1},
+          {id: 3, name: 'Malang', state_id: 1, district_id: 2},
+          {id: 4, name: 'Surabaya', state_id: 2, district_id: 3},
+          {id: 5, name: 'Solo', state_id: 2, district_id: 3},
+          {id: 6, name: 'City of Segamat 1', state_id: 2, district_id: 4},
+          {id: 7, name: 'City of Shah Alam 1', state_id: 3, district_id: 5},
+          {id: 8, name: 'City of Klang 1', state_id: 3, district_id: 6},
+          {id: 9, name: 'City of Klang 2', state_id: 3, district_id: 6}
+      ];
+      }
+
+     
+      setDistrictValues(sState) {
+        this.selectedDistricts = this.districts.filter(district => district.state_id == sState.id)
+    }
+    
+     setCityValues(sDistrict) {
+        this.selectedCities = this.cities.filter(city => city.district_id == sDistrict.id);
+    }
+    
+
   ionViewDidLoad() {
     let loc: LatLng;
     this.loadMap();
-    
+
     this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
       //Get User location
       this.getLocation().then(res => {
