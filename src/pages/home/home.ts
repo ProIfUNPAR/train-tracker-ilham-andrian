@@ -89,7 +89,7 @@ export class HomePage {
 
   initializeDistrict(){
     this.districts = [
-        {id: 1, name: 'Argo Parahyangan', state_id: 1, state_name: 'Melaka'},
+        {id: 1, name: 'Argo Parahyangan', state_id: 1, state_name: 'Argo Parahyangan'},
         {id: 2, name: 'Argo Jati', state_id: 1, state_name: 'Melaka'},
         {id: 3, name: 'Harina', state_id: 2, state_name: 'Johor'},
         {id: 4, name: 'Lodaya', state_id: 2, state_name: 'Johor'},
