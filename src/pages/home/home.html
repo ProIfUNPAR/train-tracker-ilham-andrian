@@ -11,13 +11,13 @@
 
   <div>
     <ion-item>
-      <ion-label>State</ion-label>
+      <ion-label>Kereta</ion-label>
       <ion-select (ionChange)="setDistrictValues(sState)" [(ngModel)]="sState">
         <ion-option [value]="sState" *ngFor="let sState of states">{{sState.name}} </ion-option>
       </ion-select>
     </ion-item>
     <ion-item *ngIf="selectedDistricts">
-      <ion-label>District</ion-label>
+      <ion-label>Stasiun Keberangakatan</ion-label>
       <ion-select (ionChange)="setCityValues(sDistrict)" [(ngModel)]="sDistrict">
         <ion-option [value]="sDistrict" *ngFor="let sDistrict of selectedDistricts">{{sDistrict.name}}</ion-option>
       </ion-select>
