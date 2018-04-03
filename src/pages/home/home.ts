@@ -143,20 +143,45 @@ export class HomePage {
   }
 
   initializeStation() {
+    //spesifikasi input { id: N, name: 'STASIUN (STS)', train_id: N, train_name: 'untuk pengelompokan'}
+    // train_id 0 = data sedang di hide
     this.stations = [
-      { id: 1, name: 'Kiaracondong BDO', train_id: 1, train_name: 'Argo Parahyangan' },
-      { id: 2, name: 'Gambir JKT', train_id: 1, train_name: 'Argo Parahyangan' },
-      { id: 3, name: 'Harina', train_id: 2, train_name: 'Johor' },
-      { id: 4, name: 'Lodaya', train_id: 2, train_name: 'Johor' },
-      { id: 5, name: 'Ciremai', train_id: 3, train_name: 'Selangor' },
-      { id: 7, name: 'Malabar', train_id: 3, train_name: 'Selangor' }
+      { id: 1, name: 'Bandung (BDO)', train_id: 1},
+      { id: 2, name: 'Banyuwangi Baru (BW)', train_id: 0},
+      { id: 3, name: 'Bogor (BOO)', train_id: 0},
+      { id: 4, name: 'Cianjur (CJ)', train_id: 0},
+      { id: 5, name: 'Cilacap (CP)', train_id: 0},
+      { id: 6, name: 'Cirebon (CN)', train_id: 0},
+      { id: 7, name: 'Gambir (GMR)', train_id: 1},
+      { id: 8, name: 'Jember (JR)', train_id: 0},
+      { id: 9, name: 'Kediri (KD)', train_id: 0},
+      { id: 10, name: 'Kiara Condong(KAC)', train_id: 0},
+      { id: 11, name: 'Kutoarjo (KTA)', train_id: 0},
+      { id: 12, name: 'Lempuyangan (LPN)', train_id: 0},
+      { id: 13, name: 'Madiun (MN)', train_id: 0},
+      { id: 14, name: 'Malang (ML)', train_id: 0},
+      { id: 15, name: 'Malang Kota lama (MLK)', train_id: 0},
+      { id: 16, name: 'Merak (MER)', train_id: 0},
+      { id: 17, name: 'Pasar Senen (PSE)', train_id: 0},
+      { id: 18, name: 'Purwokerto (PWT)', train_id: 0},
+      { id: 19, name: 'Purwosari (PWS)', train_id: 0},
+      { id: 20, name: 'Semarang Poncol (SMC)', train_id: 0},
+      { id: 21, name: 'Semarang Tawang (SMT)', train_id: 0},
+      { id: 22, name: 'Solo Balapan (SLO)', train_id: 0},
+      { id: 23, name: 'Sukabumi (SI)', train_id: 0},
+      { id: 24, name: 'Surabaya Gubeng (SGU)', train_id: 0},
+      { id: 25, name: 'Surabaya Kota (SB)', train_id: 0},
+      { id: 26, name: 'Surabaya Pasarturi (SBI)', train_id: 0},
+      { id: 27, name: 'Tegal (TG)', train_id: 0},
+      { id: 28, name: 'Yogyakarta (YK)', train_id: 0},
+      { id: 29, name: 'Semarang Poncol (SMC)', train_id: 0},
     ];
   }
-
+//representasikan jalur
   initializeCity() {
     this.cities = [
-      { id: 1, name: 'Bandung', latitude: '-6.92501694', longitude: '107.64641998', train_id: 1, station_id: 1 },
-      { id: 2, name: 'Jakarta', latitude: '-6.1767728', longitude: '106.8306364', train_id: 1, station_id: 2 },
+      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', train_id: 1, station_id: 1 },
+      { id: 2, name: 'Jakarta(GMR)-Bandung(BDO)', train_id: 1, station_id: 7 },
       { id: 3, name: 'Malang', train_id: 0, station_id: 0 },
       { id: 4, name: 'Surabaya', train_id: 2, station_id: 3 },
       { id: 5, name: 'Solo', train_id: 2, station_id: 3 },
