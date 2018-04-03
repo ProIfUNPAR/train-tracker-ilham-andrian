@@ -28,15 +28,15 @@ import { AngularFireList } from 'angularfire2/database/interfaces';
 
 export class HomePage {
   //-----hardcode---------//
-  public states: any[];
-  public districts: any[];
+  public trains: any[];
+  public stations: any[];
   public cities: any[];
 
-  public selectedDistricts: any[];
+  public selectedStations: any[];
   public selectedCities: any[];
 
-  public sState: any;
-  public sDistrict: any;
+  public sTrain: any;
+  public sStation: any;
   //-----map-------------//
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
@@ -47,8 +47,8 @@ export class HomePage {
   constructor(public navCtrl: NavController, private camera: Camera, private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     //------hardcode----//
-    this.initializeState();
-    this.initializeDistrict();
+    this.initializeTrain();
+    this.initializeStation();
     this.initializeCity();
     //------firebase----//  
     this.trainData = this.firebaseService.getTrainList();
@@ -76,72 +76,107 @@ export class HomePage {
 
   //----hardcode method----//
 
-  initializeState() {
-    this.states = [
-      { id: 1, name: 'Argo Parahyangan' },
-      { id: 2, name: 'Argo Jati' },
-      { id: 3, name: 'Harina' },
-      { id: 4, name: 'Lodaya' },
-      { id: 5, name: 'Ciremai Ekspres' },
-      { id: 6, name: 'Malabar' },
-      { id: 7, name: 'Argo Bromo' },
-      { id: 8, name: 'Argo Willis' },
-      { id: 9, name: 'Argo Lawu' },
-      { id: 10, name: 'Argo Dwipangga' },
-      { id: 11, name: 'Argo Sindoro' },
-      { id: 12, name: 'Argo Muria' },
-      { id: 13, name: 'Bima' },
-      { id: 14, name: 'Sembrani' },
-      { id: 15, name: 'Turangga' },
-      { id: 16, name: 'Taksaka' },
-      { id: 17, name: 'Bangunkarta' },
-      { id: 18, name: 'Purwojaya' },
-      { id: 19, name: 'Cirebon Ekspres' },
-      { id: 20, name: 'Tegal Bahari' },
-      { id: 13, name: 'Gumarang' },
-      { id: 13, name: 'Sancaka' },
-      { id: 13, name: 'Mutiara Timur' },
-      { id: 13, name: 'Malioboro' },
-      { id: 13, name: 'Pangrago/Siliwangi' },
-      { id: 13, name: 'Mutiara Selatan' },
+  initializeTrain() {
+    this.trains = [
+      { id: 1, name: 'Argo Parahyangan'},
+      { id: 2, name: 'Argo Jati'},
+      { id: 3, name: 'Harina'},
+      { id: 4, name: 'Lodaya'},
+      { id: 5, name: 'Ciremai Ekspres'},
+      { id: 6, name: 'Malabar'},
+      { id: 7, name: 'Argo Bromo'},
+      { id: 8, name: 'Argo Willis'},
+      { id: 9, name: 'Argo Lawu'},
+      { id: 10, name: 'Argo Dwipangga'},
+      { id: 11, name: 'Argo Sindoro'},
+      { id: 12, name: 'Argo Muria'},
+      { id: 13, name: 'Bima'},
+      { id: 14, name: 'Sembrani'},
+      { id: 15, name: 'Turangga'},
+      { id: 16, name: 'Taksaka'},
+      { id: 17, name: 'Bangunkarta'},
+      { id: 18, name: 'Purwojaya'},
+      { id: 19, name: 'Cirebon Ekspres'},
+      { id: 20, name: 'Tegal Bahari'},
+      { id: 21, name: 'Gumarang'},
+      { id: 22, name: 'Sancaka'},
+      { id: 23, name: 'Mutiara Timur'},
+      { id: 24, name: 'Malioboro'},
+      { id: 25, name: 'Pangrago/Siliwangi'},
+      { id: 26, name: 'Mutiara Selatan'},
+      { id: 27, name: 'Senja Utama Solo'},
+      { id: 28, name: 'Fajar Utama Yogya'},
+      { id: 29, name: 'Senja Utama Yogya'},
+      { id: 30, name: 'Sawunggalih' },
+      { id: 31, name: 'Sarangan Ekspres'},
+      { id: 32, name: 'Sidomukti'},
+      { id: 33, name: 'Majapahit'},
+      { id: 34, name: 'Jayabaya'},
+      { id: 35, name: 'Jaka Tingkir'},
+      { id: 36, name: 'Menoreh'},
+      { id: 37, name: 'Bogowonto'},
+      { id: 38, name: 'Gajah Wong'},
+      { id: 39, name: 'Karakatau'},
+      { id: 40, name: 'Matarmaja'},
+      { id: 41, name: 'Gaya Baru Malam Selatan'},
+      { id: 42, name: 'Brantas' },
+      { id: 43, name: 'Kertajaya'},
+      { id: 44, name: 'Pasundan'},
+      { id: 45, name: 'Kahuripan'},
+      { id: 46, name: 'Bengawan'},
+      { id: 47, name: 'Progo'},
+      { id: 48, name: 'Logawa'},
+      { id: 49, name: 'Kuntojaya Utara'},
+      { id: 50, name: 'Sri Tanjung'},
+      { id: 51, name: 'Tawang Jaya'},
+      { id: 52, name: 'Kuntojaya Selatan'},
+      { id: 53, name: 'Tegal Arum'},
+      { id: 54, name: 'Tawang Alun'},
+      { id: 55, name: 'Tegal Ekspres'},
+      { id: 56, name: 'Maharani'},
+      { id: 57, name: 'Kalijaga'},
+      { id: 58, name: 'Probowangi'},
+      { id: 59, name: 'Serayu'},
+      { id: 60, name: 'Kamandeka'},
+      { id: 61, name: 'Joglokerto'}
     ];
   }
 
-  initializeDistrict(){
-    this.districts = [
-        {id: 1, name: 'Kiaracondong BDO', state_id: 1, state_name: 'Argo Parahyangan'},
-        {id: 2, name: 'Gambir JKT', state_id: 1, state_name: 'Melaka'},
-        {id: 3, name: 'Harina', state_id: 2, state_name: 'Johor'},
-        {id: 4, name: 'Lodaya', state_id: 2, state_name: 'Johor'},
-        {id: 5, name: 'Ciremai', state_id: 3, state_name: 'Selangor'},
-        {id: 7, name: 'Malabar', state_id: 3, state_name: 'Selangor'}
+  initializeStation() {
+    this.stations = [
+      { id: 1, name: 'Kiaracondong BDO', train_id: 1, train_name: 'Argo Parahyangan' },
+      { id: 2, name: 'Gambir JKT', train_id: 1, train_name: 'Argo Parahyangan' },
+      { id: 3, name: 'Harina', train_id: 2, train_name: 'Johor' },
+      { id: 4, name: 'Lodaya', train_id: 2, train_name: 'Johor' },
+      { id: 5, name: 'Ciremai', train_id: 3, train_name: 'Selangor' },
+      { id: 7, name: 'Malabar', train_id: 3, train_name: 'Selangor' }
     ];
-    }
+  }
 
-    initializeCity(){
-      this.cities = [
-          {id: 1, name: 'Bandung',latitude: '-6.92501694', longitude:'107.64641998',state_id: 1, district_id: 1},
-          {id: 2, name: 'Jakarta',latitude: '-6.1767728', longitude:'106.8306364', state_id: 1, district_id: 1},
-          {id: 3, name: 'Malang', state_id: 1, district_id: 2},
-          {id: 4, name: 'Surabaya', state_id: 2, district_id: 3},
-          {id: 5, name: 'Solo', state_id: 2, district_id: 3},
-          {id: 6, name: 'City of Segamat 1', state_id: 2, district_id: 4},
-          {id: 7, name: 'City of Shah Alam 1', state_id: 3, district_id: 5},
-          {id: 8, name: 'City of Klang 1', state_id: 3, district_id: 6},
-          {id: 9, name: 'City of Klang 2', state_id: 3, district_id: 6}
-      ];
-      }
+  initializeCity() {
+    this.cities = [
+      { id: 1, name: 'Bandung', latitude: '-6.92501694', longitude: '107.64641998', train_id: 1, station_id: 1 },
+      { id: 2, name: 'Jakarta', latitude: '-6.1767728', longitude: '106.8306364', train_id: 1, station_id: 2 },
+      { id: 3, name: 'Malang', train_id: 0, station_id: 0 },
+      { id: 4, name: 'Surabaya', train_id: 2, station_id: 3 },
+      { id: 5, name: 'Solo', train_id: 2, station_id: 3 },
+      { id: 6, name: 'City of Segamat 1', train_id: 2, station_id: 4 },
+      { id: 7, name: 'City of Shah Alam 1', train_id: 3, station_id: 5 },
+      { id: 8, name: 'City of Klang 1', train_id: 3, station_id: 6 },
+      { id: 9, name: 'City of Klang 2', train_id: 3, station_id: 6 }
+    ];
+  }
 
-     
-      setDistrictValues(sState) {
-        this.selectedDistricts = this.districts.filter(district => district.state_id == sState.id)
-    }
-    
-     setCityValues(sDistrict) {
-        this.selectedCities = this.cities.filter(city => city.district_id == sDistrict.id);
-    }
-    
 
+  setDistrictValues(sTrain) {
+    this.selectedStations = this.stations.filter(station => station.train_id == sTrain.id)
+  }
+
+  setCityValues(sStation) {
+    this.selectedCities = this.cities.filter(city => city.station_id == sStation.id);
+  }
+
+  /// maps ///
   ionViewDidLoad() {
     let loc: LatLng;
     this.loadMap();
