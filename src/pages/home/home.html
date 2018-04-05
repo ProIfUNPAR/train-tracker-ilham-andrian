@@ -16,20 +16,19 @@
         <ion-option [value]="sTrain" *ngFor="let sTrain of trains">{{sTrain.name}} </ion-option>
       </ion-select>
     </ion-item>
+
     <ion-item *ngIf="selectedStations">
       <ion-label>Stasiun Keberangakatan</ion-label>
       <ion-select (ionChange)="setCityValues(sStation)" [(ngModel)]="sStation">
         <ion-option [value]="sStation" *ngFor="let sStation of selectedStations">{{sStation.name}}</ion-option>
       </ion-select>
     </ion-item>
+
     <ion-list *ngIf="selectedCities">
         <p>Destination</p>
       <ion-item *ngFor="let city of selectedCities">
-        
         <p>{{city.name}}</p>
-       
       </ion-item>
-    
     </ion-list>
 
     <!--            -->
@@ -41,7 +40,7 @@
 
   <!--<button ion-button full (click)="scheduleNotification()">Notifications</button> -->
 
-  <button ion-button round style="float:right" onclick="isSelected()">search</button>
+  <button ion-button round style="float:right" onclick="">search</button>
 
 
 
