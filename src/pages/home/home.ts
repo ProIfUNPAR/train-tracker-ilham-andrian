@@ -34,7 +34,7 @@ export class HomePage {
 
   public selectedStations: any[];
   public selectedCities: any[];
-
+  public google:any;
   public sTrain: any;
   public sStation: any;
   //-----map-------------//
@@ -222,66 +222,66 @@ export class HomePage {
   //representasikan jalur
   initializeCity() {
     this.cities = [
-      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', train_id: 1, station_id: 1.1 },
-      { id: 2, name: 'Jakarta(GMR)-Bandung(BDO)', train_id: 1, station_id: 7.1 },
-      { id: 3, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 2, station_id: 6.1 },
-      { id: 4, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 2, station_id: 7.2 },
-      { id: 5, name: 'Surabaya(SBI)-Bandung(BDO)', train_id: 3, station_id: 26.1 },
-      { id: 5, name: 'Bandung(BDO)-Surabaya(SBI)', train_id: 3, station_id: 1.2 },
-      { id: 6, name: 'Solo(SLO)-Bandung(BDO)', train_id: 4, station_id: 22.1 },
-      { id: 7, name: 'Bandung(BDO)-Solo(SLO)', train_id: 4, station_id: 1.3 },
-      { id: 8, name: 'Semarang(SMT)-Bandung(BDO)', train_id: 5, station_id: 21.1 },
-      { id: 9, name: 'Bandung(BDO)-Semarang(SMT)', train_id: 5, station_id: 1.4 },
-      { id: 10, name: 'Malang(ML)-Bandung(BDO)', train_id: 6, station_id: 14.1 },
-      { id: 11, name: 'Bandung(BDO)-Malang(ML)', train_id: 6, station_id: 1.5 },
-      { id: 12, name: 'Surabaya(SBI)-Jakarta(GMR)', train_id: 7, station_id: 26.2 },
-      { id: 13, name: 'Jakarta(GMR)-Surabaya(SBI)', train_id: 7, station_id: 7.3 },
-      { id: 14, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 8, station_id: 24.1 },
-      { id: 15, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 8, station_id: 1.6 },
-      { id: 16, name: 'Solo(SLO)-Jakarta(GMR)', train_id: 9, station_id: 22.2 },
-      { id: 17, name: 'Jakarta(GMR)-Solo(SLO)', train_id: 9, station_id: 7.4 },
-      { id: 18, name: 'Solo(SLO)-Jakarta(GMR)', train_id: 10, station_id: 22.3 },
-      { id: 19, name: 'Jakarta(GMR)-Solo(SLO)', train_id: 10, station_id: 7.5 },
-      { id: 20, name: 'Semarang(SMT)-Jakarta(GMR)', train_id: 11, station_id: 21.2 },
-      { id: 21, name: 'Jakarta(GMR)-Semarang(SMT)', train_id: 11, station_id: 7.6 },
-      { id: 22, name: 'Semarang(SMT)-Jakarta(GMR)', train_id: 12, station_id: 21.3 },
-      { id: 23, name: 'Jakarta(GMR)-Semarang(SMT)', train_id: 12, station_id: 7.7 },
-      { id: 24, name: 'Malang(ML)-Jakarta(GMR)', train_id: 13, station_id: 14.2 },
-      { id: 25, name: 'Jakarta(GMR)-Malang(ML)', train_id: 13, station_id: 7.8 },
-      { id: 26, name: 'Surabaya(SBI)-Jakarta(GMR)', train_id: 14, station_id: 26.3 },
-      { id: 27, name: 'Jakarta(GMR)-Surabaya(SBI)', train_id: 14, station_id: 7.9 },
-      { id: 28, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 15, station_id: 1.7 },
-      { id: 29, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 15, station_id: 24.2 },
-      { id: 30, name: 'Yogyakarta(YK)-Jakarta(GMR)', train_id: 16, station_id: 28.1 },
-      { id: 31, name: 'Jakarta(GMR)-Yogyakarta(YK)', train_id: 16, station_id: '7.A' },
-      { id: 32, name: 'Surabaya(SGU)-Jakarta(GMR)', train_id: 17, station_id: 24.3 },
-      { id: 33, name: 'Jakarta(GMR)-Surabaya(SGU)', train_id: 17, station_id: '7.B' },
-      { id: 34, name: 'Cilacap(CP)-Jakarta(GMR)', train_id: 18, station_id: 5.1 },
-      { id: 35, name: 'Gambir(GMR)-Cilacap(CP)', train_id: 18, station_id: '7.C' },
-      { id: 36, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 19, station_id: 6.2 },
-      { id: 37, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 19, station_id: '7.D' },
-      { id: 38, name: 'Tegal(TG)-Jakarta(GMR)', train_id: 20, station_id: 27.1 },
-      { id: 39, name: 'Jakarta(GMR)-Tegal(TG)', train_id: 20, station_id: '7.E' },
-      { id: 40, name: 'Surabaya(SBI)-Jakarta(PSE)', train_id: 21, station_id: 26.4 },
-      { id: 41, name: 'Jakarta(PSE)-Surabaya(SBI)', train_id: 21, station_id: 17.1 },
-      { id: 42, name: 'Surabaya(SGU)-Yogyakarta(YK)', train_id: 22, station_id: 24.4 },
-      { id: 43, name: 'Yogyakarta(YK)-Surabaya(SGU)', train_id: 22, station_id: 28.2 },
-      { id: 44, name: 'Surabaya(SGU)-Banyuwangi(BW)', train_id: 23, station_id: 24.5 },
-      { id: 45, name: 'Banyuwangi(BW)-Surabaya(SGU)', train_id: 23, station_id: 2.1 },
-      { id: 46, name: 'Malang(ML)-Yogyakarta(YK)', train_id: 24, station_id: 14.3 },
-      { id: 47, name: 'Yogyakarta(YK)-Malang(ML)', train_id: 24, station_id: 28.3 },
-      { id: 48, name: 'Sukabumi(SI)-Bogor(BOO)', train_id: 25, station_id: 23.1 },
-      { id: 49, name: 'Bogor(BOO)-Sukabumi(SI)', train_id: 25, station_id: 3.1 },
-      { id: 50, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 26, station_id: 24.6 },
-      { id: 51, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 26, station_id: 1.8 },
-      { id: 52, name: 'Solo(SLO)-Jakarta(PSE)', train_id: 27, station_id: 22.4 },
-      { id: 53, name: 'Jakarta(PSE)-Solo(SLO)', train_id: 27, station_id: 17.2 },
-      { id: 54, name: 'Yogyakarta(YK)-Jakarta(PSE)', train_id: 28, station_id: 28.4 },
-      { id: 55, name: 'Jakarta(PSE)-Yogyakarta(YK)', train_id: 28, station_id: 17.3 },
-      { id: 56, name: 'Kutoarjo(KTA)-Jakarta(PSE)', train_id: 29, station_id: 11.1 },
-      { id: 57, name: 'Jakarta(PSE)-Kutoarjo(KTA)', train_id: 29, station_id: 17.4 },
-      { id: 58, name: 'Surabaya(SGU)-Madiun(MN)', train_id: 30, station_id: 24.7 },
-      { id: 59, name: 'Madiun(MN)-Surabaya(SGU)', train_id: 30, station_id: 13.1 },
+      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', train_id: 1, station_id: 1.1, longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 2, name: 'Jakarta(GMR)-Bandung(BDO)', train_id: 1, station_id: 7.1, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
+      { id: 3, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 2, station_id: 6.1, longitudeStart:108.555444 , langitudeStart:-6.705386 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 4, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 2, station_id: 7.2, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:108.555444 , langitudeEnd:-6.705386 },
+      { id: 5, name: 'Surabaya(SBI)-Bandung(BDO)', train_id: 3, station_id: 26.1 , longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
+      { id: 5, name: 'Bandung(BDO)-Surabaya(SBI)', train_id: 3, station_id: 1.2 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:112.744042 , langitudeEnd:7.243142},
+      { id: 6, name: 'Solo(SLO)-Bandung(BDO)', train_id: 4, station_id: 22.1, longitudeStart:110.821417 , langitudeStart:-7.557016 , longitudeEnd:107.602438 , langitudeEnd:-6.914632 },
+      { id: 7, name: 'Bandung(BDO)-Solo(SLO)', train_id: 4, station_id: 1.3 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:110.821417 , langitudeEnd:-7.557016},
+      { id: 8, name: 'Semarang(SMT)-Bandung(BDO)', train_id: 5, station_id: 21.1 , longitudeStart:110.427923 , langitudeStart:-6.964446 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
+      { id: 9, name: 'Bandung(BDO)-Semarang(SMT)', train_id: 5, station_id: 1.4 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:110.427923  , langitudeEnd:-6.964446},
+      { id: 10, name: 'Malang(ML)-Bandung(BDO)', train_id: 6, station_id: 14.1 , longitudeStart:112.637028 , langitudeStart:-7.977497 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
+      { id: 11, name: 'Bandung(BDO)-Malang(ML)', train_id: 6, station_id: 1.5 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:112.637028 , langitudeEnd:-7.977497},
+      { id: 12, name: 'Surabaya(SBI)-Jakarta(GMR)', train_id: 7, station_id: 26.2 , longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:106.830636 , langitudeEnd:-6.176773},
+      { id: 13, name: 'Jakarta(GMR)-Surabaya(SBI)', train_id: 7, station_id: 7.3, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:112.744042 , langitudeEnd:7.243142 },
+      { id: 14, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 8, station_id: 24.1, longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:107.602438  , langitudeEnd:-6.914632 },
+      { id: 15, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 8, station_id: 1.6, longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:112.752035 , langitudeEnd:-7.265678 },
+      { id: 16, name: 'Solo(SLO)-Jakarta(GMR)', train_id: 9, station_id: 22.2, longitudeStart:110.821417 , langitudeStart:-7.557016 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 17, name: 'Jakarta(GMR)-Solo(SLO)', train_id: 9, station_id: 7.4, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:110.821417 , langitudeEnd:-7.557016 },
+      { id: 18, name: 'Solo(SLO)-Jakarta(GMR)', train_id: 10, station_id: 22.3, longitudeStart:110.821417 , langitudeStart:-7.557016 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 19, name: 'Jakarta(GMR)-Solo(SLO)', train_id: 10, station_id: 7.5, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:110.821417 , langitudeEnd:-7.557016 },
+      { id: 20, name: 'Semarang(SMT)-Jakarta(GMR)', train_id: 11, station_id: 21.2, longitudeStart:110.427923 , langitudeStart:-6.964446 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 21, name: 'Jakarta(GMR)-Semarang(SMT)', train_id: 11, station_id: 7.6 , longitudeStart:106.830636 , langitudeStart:-6.176773,longitudeEnd:110.427923  , langitudeEnd:-6.964446 },
+      { id: 22, name: 'Semarang(SMT)-Jakarta(GMR)', train_id: 12, station_id: 21.3, longitudeStart:110.427923 , langitudeStart:-6.964446,longitudeEnd:106.830636 , langitudeEnd:-6.176773  },
+      { id: 23, name: 'Jakarta(GMR)-Semarang(SMT)', train_id: 12, station_id: 7.7, longitudeStart:106.830636 , langitudeStart:-6.176773,longitudeEnd:110.427923  , langitudeEnd:-6.964446 },
+      { id: 24, name: 'Malang(ML)-Jakarta(GMR)', train_id: 13, station_id: 14.2 , longitudeStart:112.637028 , langitudeStart:-7.977497, longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 25, name: 'Jakarta(GMR)-Malang(ML)', train_id: 13, station_id: 7.8 , longitudeStart:106.830636 , langitudeStart:-6.176773, longitudeEnd:112.637028 , langitudeEnd:-7.977497  },
+      { id: 26, name: 'Surabaya(SBI)-Jakarta(GMR)', train_id: 14, station_id: 26.3, longitudeStart:112.744042 , langitudeStart:-7.243142, longitudeEnd:106.830636 , langitudeEnd:-6.176773},
+      { id: 27, name: 'Jakarta(GMR)-Surabaya(SBI)', train_id: 14, station_id: 7.9, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:112.744042 , langitudeEnd:7.243142 },
+      { id: 28, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 15, station_id: 1.7 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:112.752035 , langitudeEnd:-7.265678},
+      { id: 29, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 15, station_id: 24.2, longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:107.602438  , langitudeEnd:-6.914632 },
+      { id: 30, name: 'Yogyakarta(YK)-Jakarta(GMR)', train_id: 16, station_id: 28.1, longitudeStart:110.363487 , langitudeStart:-7.789200,  longitudeEnd:106.830636 , langitudeEnd:-6.176773},
+      { id: 31, name: 'Jakarta(GMR)-Yogyakarta(YK)', train_id: 16, station_id: '7.A', longitudeStart:106.830636 , langitudeStart:-6.176773, longitudeEnd:110.363487 , langitudeEnd:-7.789200 },
+      { id: 32, name: 'Surabaya(SGU)-Jakarta(GMR)', train_id: 17, station_id: 24.3, longitudeStart:112.744042 , langitudeStart:-7.243142, longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 33, name: 'Jakarta(GMR)-Surabaya(SGU)', train_id: 17, station_id: '7.B',longitudeStart:106.830636 , langitudeStart:-6.176773, longitudeEnd:112.752035 , langitudeEnd:-7.265678  },
+      { id: 34, name: 'Cilacap(CP)-Jakarta(GMR)', train_id: 18, station_id: 5.1, longitudeStart:109.007070 , langitudeStart:-7.736046, longitudeEnd:106.830636 , langitudeEnd:-6.176773  },
+      { id: 35, name: 'Gambir(GMR)-Cilacap(CP)', train_id: 18, station_id: '7.C', longitudeStart:106.830636 , langitudeStart:-6.176773, longitudeEnd:109.007070, langitudeEnd:-7.736046 },
+      { id: 36, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 19, station_id: 6.2, longitudeStart:108.555444 , langitudeStart:-6.705386 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 37, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 19, station_id: '7.D', longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:108.555444 , langitudeEnd:-6.705386 },
+      { id: 38, name: 'Tegal(TG)-Jakarta(GMR)', train_id: 20, station_id: 27.1, longitudeStart:109.142690, langitudeStart:-6.867349 , longitudeEnd:106.830636 , langitudeEnd:-6.176773  },
+      { id: 39, name: 'Jakarta(GMR)-Tegal(TG)', train_id: 20, station_id: '7.E', longitudeStart:106.830636 , langitudeStart:-6.176773,longitudeEnd:109.142690, langitudeEnd:-6.867349  },
+      { id: 40, name: 'Surabaya(SBI)-Jakarta(PSE)', train_id: 21, station_id: 26.4, longitudeStart:112.744042 , langitudeStart:-7.243142,longitudeEnd:106.844337, langitudeEnd:-6.174732 },
+      { id: 41, name: 'Jakarta(PSE)-Surabaya(SBI)', train_id: 21, station_id: 17.1, longitudeStart:106.844337 , langitudeStart:-6.174732 ,longitudeEnd:112.744042, langitudeEnd:-7.243142 },
+      { id: 42, name: 'Surabaya(SGU)-Yogyakarta(YK)', train_id: 22, station_id: 24.4, longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:110.363487 , langitudeEnd:-7.789200 },
+      { id: 43, name: 'Yogyakarta(YK)-Surabaya(SGU)', train_id: 22, station_id: 28.2, longitudeStart:110.363487 , langitudeStart:-7.789200, longitudeEnd:112.752035 , langitudeEnd:-7.265678  },
+      { id: 44, name: 'Surabaya(SGU)-Banyuwangi(BW)', train_id: 23, station_id: 24.5,longitudeStart:112.744042 , langitudeStart:-7.243142, longitudeEnd:114.397142 , langitudeEnd:-8.141180 },
+      { id: 45, name: 'Banyuwangi(BW)-Surabaya(SGU)', train_id: 23, station_id: 2.1,longitudeStart:114.397142, langitudeStart:-8.141180, longitudeEnd:112.744042  , langitudeEnd:-7.243142},
+      { id: 46, name: 'Malang(ML)-Yogyakarta(YK)', train_id: 24, station_id: 14.3, longitudeStart:112.637028 , langitudeStart:-7.977497, longitudeEnd:110.363487 , langitudeEnd:-7.789200 },
+      { id: 47, name: 'Yogyakarta(YK)-Malang(ML)', train_id: 24, station_id: 28.3, longitudeStart:110.363487 , langitudeStart:-7.789200,  longitudeEnd:112.637028 , langitudeEnd:-7.977497},
+      { id: 48, name: 'Sukabumi(SI)-Bogor(BOO)', train_id: 25, station_id: 23.1, longitudeStart:106.929587 , langitudeStart:-6.925075, longitudeEnd:106.790425 , langitudeEnd:-6.595616 },
+      { id: 49, name: 'Bogor(BOO)-Sukabumi(SI)', train_id: 25, station_id: 3.1, longitudeStart:106.790425 , langitudeStart:-6.595616, longitudeEnd:106.929587 , langitudeEnd:-6.925075 },
+      { id: 50, name: 'Surabaya(SGU)-Bandung(BDO)', train_id: 26, station_id: 24.6, longitudeStart:112.744042 , langitudeStart:-7.243142 , longitudeEnd:107.602438  , langitudeEnd:-6.914632  },
+      { id: 51, name: 'Bandung(BDO)-Surabaya(SGU)', train_id: 26, station_id: 1.8 , longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:112.752035 , langitudeEnd:-7.265678},
+      { id: 52, name: 'Solo(SLO)-Jakarta(PSE)', train_id: 27, station_id: 22.4, longitudeStart:110.821417 , langitudeStart:-7.557016 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 53, name: 'Jakarta(PSE)-Solo(SLO)', train_id: 27, station_id: 17.2, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:110.821417 , langitudeEnd:-7.557016 },
+      { id: 54, name: 'Yogyakarta(YK)-Jakarta(PSE)', train_id: 28, station_id: 28.4, longitudeStart:110.363487 , langitudeStart:-7.789200,  longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 55, name: 'Jakarta(PSE)-Yogyakarta(YK)', train_id: 28, station_id: 17.3 , longitudeStart:106.830636 , langitudeStart:-6.176773, longitudeEnd:110.363487 , langitudeEnd:-7.789200},
+      { id: 56, name: 'Kutoarjo(KTA)-Jakarta(PSE)', train_id: 29, station_id: 11.1, longitudeStart:109.907126 , langitudeStart:-7.726044, longitudeEnd:106.844337, langitudeEnd:-6.174732 },
+      { id: 57, name: 'Jakarta(PSE)-Kutoarjo(KTA)', train_id: 29, station_id: 17.4, longitudeStart:106.844337 , langitudeStart:-6.174732, longitudeEnd:109.907126, langitudeEnd:-7.726044 },
+      { id: 58, name: 'Surabaya(SGU)-Madiun(MN)', train_id: 30, station_id: 24.7,longitudeStart:112.744042 , langitudeStart:-7.243142, longitudeEnd:111.524395 , langitudeEnd:-7.618830},
+      { id: 59, name: 'Madiun(MN)-Surabaya(SGU)', train_id: 30, station_id: 13.1,longitudeStart:111.524395 , langitudeStart:-7.618830 , longitudeEnd:112.752035 , langitudeEnd:-7.265678},
     ];
   }
   //{ id: N, name: '', train_id: 0, station_id: 0 },
@@ -363,6 +363,36 @@ export class HomePage {
       text: 'Ilham Notifications',
       at: new Date(new Date().getTime() + 5 * 1000),
       data: { myData: 'Notifnya udah keluar belum ?' }
+    });
+  }
+
+  calculateAndDisplayRoute() {
+    var loc:LatLng;
+    var tempLocStart : LatLng[];
+    var tempLocEnd : LatLng[];
+    let directionsService = new this.google.maps.DirectionsService;
+    let directionsDisplay = new this.google.maps.DirectionsRenderer;
+   
+    this.loadMap();
+
+    this.getLocation().then(res =>{
+      loc = new LatLng(res.coords.latitude, res.coords.longitude);
+    });
+
+    tempLocStart = this.cities.filter(city => city.longitudeStart,city => city.langitudeStart);
+    tempLocEnd = this.cities.filter(city => city.longitudeEnd,city => city.langitudeEnd);
+
+    
+    directionsService.route({
+      origin: tempLocStart,
+      destination: tempLocEnd,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
     });
   }
 
