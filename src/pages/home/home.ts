@@ -11,6 +11,7 @@ import { GoogleMaps, GoogleMap, CameraPosition, LatLng, GoogleMapsEvent, Marker,
 import { AngularFireObject } from 'angularfire2/database';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { AngularFireList } from 'angularfire2/database/interfaces';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 
 @NgModule({
