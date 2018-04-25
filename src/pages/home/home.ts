@@ -78,8 +78,9 @@ export class HomePage {
   //----hardcode method----//
 
   initializeTrain() {
+    //ubah dtabase stasiun gaboleh duplikat koor di stasiun
     this.trains = [
-      { id: 1, name: '1.Argo Parahyangan' },
+      { id: 1, name: '1.Argo Parahyangan', tracks: [1,2] },
       { id: 2, name: '2.Argo Jati' },
       { id: 3, name: '3.Harina' },
       { id: 4, name: '4.Lodaya' },
@@ -146,6 +147,7 @@ export class HomePage {
     //spesifikasi input { id: N, name: 'STASIUN (STS)', train_id: N, train_name: 'untuk pengelompokan'}
     // train_id 0 = data sedang di hide
     this.stations = [
+     // { id: 1, name: "Badung (BDO)", lt, long}  SARAN PA PASKAL
       { id: 1.1, name: 'Bandung (BDO)', train_id: 1 },
       { id: 1.2, name: 'Bandung (BDO)', train_id: 3 },
       { id: 1.3, name: 'Bandung (BDO)', train_id: 4 },
@@ -272,7 +274,8 @@ export class HomePage {
   //representasikan jalur
   initializeCity() {
     this.cities = [
-      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', train_id: 1, station_id: 1.1, longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      //ASUMSI PA PASKAL DI ID 1
+      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', stations: [1, 3, 4, 5, 7], train_id: 1, station_id: 1.1, longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
       { id: 2, name: 'Jakarta(GMR)-Bandung(BDO)', train_id: 1, station_id: 7.1, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
       { id: 3, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 2, station_id: 6.1, longitudeStart:108.555444 , langitudeStart:-6.705386 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
       { id: 4, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 2, station_id: 7.2, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:108.555444 , langitudeEnd:-6.705386 },
