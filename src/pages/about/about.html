@@ -5,32 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>About</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
+  <h3>See Your Train Route</h3>
+  
+    <!--        -->
+  
+    <div>
+      <ion-item>
+        <ion-label>Kereta</ion-label>
+        <ion-select (ionChange)="setDistrictValues(sTrain)" [(ngModel)]="sTrain">
+          <ion-option [value]="sTrain" *ngFor="let sTrain of trains">{{sTrain.name}} </ion-option>
+        </ion-select>
+      </ion-item>
 
-  <ion-item>
-    <ion-label>State</ion-label>
-    <ion-select (ionChange)="setDistrictValues(sState)"[(ngModel)]="sState">
-        <ion-option [value]="sState" *ngFor="let sState of states">{{sState.name}} </ion-option>
-    </ion-select>
-</ion-item>
-<ion-item *ngIf="selectedDistricts">
-   <ion-label>District</ion-label>
-   <ion-select (ionChange)="setCityValues(sDistrict)" [(ngModel)]="sDistrict">
-       <ion-option [value]="sDistrict" *ngFor="let sDistrict of selectedDistricts">{{sDistrict.name}}</ion-option>
-   </ion-select>
-</ion-item>
-<ion-list *ngIf="selectedCities">
-    <ion-item *ngFor="let city of selectedCities">
-         <p>{{city.name}}</p>
-    </ion-item>
-</ion-list>
+      <ion-label>Track</ion-label>
 
 
+    </div>
 </ion-content>

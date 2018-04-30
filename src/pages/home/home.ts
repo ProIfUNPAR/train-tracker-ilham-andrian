@@ -3,14 +3,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, AlertController, Platform } from 'ionic-angular';
-import { FirebaseServiceProvider } from './../../providers/firebase-service/firebase-service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { GoogleMaps, GoogleMap, CameraPosition, LatLng, GoogleMapsEvent, Marker, MarkerOptions, ILatLng } from '@ionic-native/google-maps';
-//import { FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireObject } from 'angularfire2/database';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { AngularFireList } from 'angularfire2/database/interfaces';
 import { BackgroundMode } from '@ionic-native/background-mode';
 
 
@@ -42,17 +38,18 @@ export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
   //-------firebase----------//
-  trainData: AngularFireList<any[]>;
+  
   newItem = '';
   appName = 'Ionic App';
+  ////////////
   constructor(public navCtrl: NavController, private camera: Camera, private _googleMaps: GoogleMaps,
-    private _geoLoc: Geolocation, public firebaseService: FirebaseServiceProvider, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
+    private _geoLoc: Geolocation, private localNotifications: LocalNotifications, private plt: Platform, public alertCtrl: AlertController) {
     //------hardcode----//
     this.initializeTrain();
     this.initializeStation();
     this.initializeCity();
     //------firebase----//  
-    this.trainData = this.firebaseService.getTrainList();
+   
     //----notification----//
     this.plt.ready().then((rdy) => {
       this.localNotifications.on('click', (notification, state) => {
@@ -67,13 +64,7 @@ export class HomePage {
     });
   }
 
-  addItem() {
-    this.firebaseService.addItem(this.newItem);
-  }
-
-  removeItem(id) {
-    this.firebaseService.removeItem(id);
-  }
+  
 
   //----hardcode method----//
 
@@ -144,6 +135,7 @@ export class HomePage {
   }
 
   initializeStation() {
+ 
     //spesifikasi input { id: N, name: 'STASIUN (STS)', train_id: N, train_name: 'untuk pengelompokan'}
     // train_id 0 = data sedang di hide
     this.stations = [
@@ -275,7 +267,7 @@ export class HomePage {
   initializeCity() {
     this.cities = [
       //ASUMSI PA PASKAL DI ID 1
-      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', stations: [1, 3, 4, 5, 7], train_id: 1, station_id: 1.1, longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
+      { id: 1, name: 'Bandung(BDO)-Jakarta(GMR)', stations: [1, 3, 4, 5, 7], train_id: 1, station_id: [], longitudeStart:107.602438 , langitudeStart:-6.914632 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
       { id: 2, name: 'Jakarta(GMR)-Bandung(BDO)', train_id: 1, station_id: 7.1, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:107.602438  , langitudeEnd:-6.914632},
       { id: 3, name: 'Cirebon(CN)-Jakarta(GMR)', train_id: 2, station_id: 6.1, longitudeStart:108.555444 , langitudeStart:-6.705386 , longitudeEnd:106.830636 , langitudeEnd:-6.176773 },
       { id: 4, name: 'Jakarta(GMR)-Cirebon(CN)', train_id: 2, station_id: 7.2, longitudeStart:106.830636 , langitudeStart:-6.176773 , longitudeEnd:108.555444 , langitudeEnd:-6.705386 },
