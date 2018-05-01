@@ -4,47 +4,42 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>See Your Train Route</h3>
-
-  <!--        -->
-
-  <div>
-    <ion-item>
-      <ion-label>Kereta</ion-label>
-      <ion-select (ionChange)="setDistrictValues(sTrain)" [(ngModel)]="sTrain">
-        <ion-option [value]="sTrain" *ngFor="let sTrain of trains">{{sTrain.name}} </ion-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item *ngIf="selectedStations">
-      <ion-label>Stasiun Keberangakatan</ion-label>
-      <ion-select (ionChange)="setCityValues(sStation)" [(ngModel)]="sStation">
-        <ion-option [value]="sStation" *ngFor="let sStation of selectedStations">{{sStation.name}}</ion-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-list *ngIf="selectedCities">
-        <p>Destination</p>
-      <ion-item *ngFor="let city of selectedCities">
-        <p>{{city.name}}</p>
-      </ion-item>
-    </ion-list>
-
-    <!--            -->
-
-    <!--            -->
-
+<ion-content>
+  <div padding>
+    <ion-slides>
+      <ion-slide>
+        <h4>See Your Train Route</h4>
+        <ion-item>
+          <ion-label floating>Kereta</ion-label>
+          <ion-select (ionChange)="setDistrictValues(sTrain)" [(ngModel)]="sTrain">
+            <ion-option [value]="sTrain" *ngFor="let sTrain of trains">{{sTrain.name}} </ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="selectedStations">
+          <ion-label floating>Stasiun Keberangakatan</ion-label>
+          <ion-select (ionChange)="setCityValues(sStation)" [(ngModel)]="sStation">
+            <ion-option [value]="sStation" *ngFor="let sStation of selectedStations">{{sStation.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-list *ngIf="selectedCities">
+          <p>Destination</p>
+          <ion-item *ngFor="let city of selectedCities">
+            <p>{{city.name}}</p>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <h4>Your Train Information</h4>
+        <ion-list>
+          <ion-item> Speed : {{speed}} </ion-item>
+          <ion-item> Distance: {{distance}} </ion-item>
+          <ion-item> Distance to next station: {{dtst}} </ion-item>
+          <ion-item> ETA: {{eta}} </ion-item>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
   </div>
-
-
-  <!--<button ion-button full (click)="scheduleNotification()">Notifications</button> -->
-
-  <button ion-button round style="float:right" onclick="">search</button>
-
-
-
-  <div #map id="map" style="height:100%"></div>
-
+  <button ion-button full (click)="addRoute();">Track</button>
+  <div #map id="map" style="height:90%"></div>
 
 </ion-content>
