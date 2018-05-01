@@ -1,0 +1,276 @@
+{
+    "trains": [
+        {
+            "id": 1,
+            "name": "1.Argo Parahyangan",
+            "station": [
+                {
+                    "name": "Bandung (BDO)",
+                    "lat": "-6.914632",
+                    "long": "107.602438"
+                },
+                {
+                    "nama": "Cimahi",
+                    "Lat": "-6.885747",
+                    "Long": "107.536122"
+                },
+                {
+                    "nama": "Purwakarta",
+                    "Lat": "-6.552785",
+                    "Long": "107.446471"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "2.Argo Jati"
+        },
+        {
+            "id": 3,
+            "name": "3.Harina"
+        },
+        {
+            "id": 4,
+            "name": "4.Lodaya"
+        },
+        {
+            "id": 5,
+            "name": "5.Ciremai Ekspres"
+        },
+        {
+            "id": 6,
+            "name": "6.Malabar"
+        },
+        {
+            "id": 7,
+            "name": "7.Argo Bromo Anggrek"
+        },
+        {
+            "id": 8,
+            "name": "8.Argo Willis"
+        },
+        {
+            "id": 9,
+            "name": "9.Argo Lawu"
+        },
+        {
+            "id": 10,
+            "name": "10.Argo Dwipangga"
+        },
+        {
+            "id": 11,
+            "name": "11.Argo Sindoro"
+        },
+        {
+            "id": 12,
+            "name": "12.Argo Muria"
+        },
+        {
+            "id": 13,
+            "name": "13.Bima"
+        },
+        {
+            "id": 14,
+            "name": "14.Sembrani"
+        },
+        {
+            "id": 15,
+            "name": "15.Turangga"
+        },
+        {
+            "id": 16,
+            "name": "16.Taksaka"
+        },
+        {
+            "id": 17,
+            "name": "17.Bangunkarta"
+        },
+        {
+            "id": 18,
+            "name": "18.Purwojaya"
+        },
+        {
+            "id": 19,
+            "name": "19.Cirebon Ekspres"
+        },
+        {
+            "id": 20,
+            "name": "20.Tegal Bahari"
+        },
+        {
+            "id": 21,
+            "name": "21.Gumarang"
+        },
+        {
+            "id": 22,
+            "name": "22.Sancaka"
+        },
+        {
+            "id": 23,
+            "name": "23.Mutiara Timur"
+        },
+        {
+            "id": 24,
+            "name": "24.Malioboro"
+        },
+        {
+            "id": 25,
+            "name": "25.Pangrango/Siliwangi"
+        },
+        {
+            "id": 26,
+            "name": "26.Mutiara Selatan"
+        },
+        {
+            "id": 27,
+            "name": "27.Utama Solo"
+        },
+        {
+            "id": 28,
+            "name": "28.Utama Yogya"
+        },
+        {
+            "id": 29,
+            "name": "29.Sawunggalih"
+        },
+        {
+            "id": 30,
+            "name": "30.Sarangan Ekspres"
+        },
+        {
+            "id": 31,
+            "name": "31.S"id"omukti"
+        },
+        {
+            "id": 32,
+            "name": "32.Majapahit"
+        },
+        {
+            "id": 33,
+            "name": "33.Jayabaya"
+        },
+        {
+            "id": 34,
+            "name": "34.Jaka Tingkir"
+        },
+        {
+            "id": 35,
+            "name": "35.Menoreh"
+        },
+        {
+            "id": 36,
+            "name": "36.Bogowonto"
+        },
+        {
+            "id": 37,
+            "name": "37.Gajah Wong"
+        },
+        {
+            "id": 38,
+            "name": "38.Karakatau"
+        },
+        {
+            "id": 39,
+            "name": "39.Matarmaja"
+        },
+        {
+            "id": 40,
+            "name": "40.Gaya Baru Malam Selatan"
+        },
+        {
+            "id": 41,
+            "name": "41.Brantas"
+        },
+        {
+            "id": 42,
+            "name": "42.Kertajaya"
+        },
+        {
+            "id": 43,
+            "name": "43.Pasundan"
+        },
+        {
+            "id": 44,
+            "name": "44.Kahuripan"
+        },
+        {
+            "id": 45,
+            "name": "45.Bengawan"
+        },
+        {
+            "id": 46,
+            "name": "46.Progo"
+        },
+        {
+            "id": 47,
+            "name": "47.Logawa"
+        },
+        {
+            "id": 48,
+            "name": "48.Kutojaya Utara"
+        },
+        {
+            "id": 49,
+            "name": "49.Sri Tanjung"
+        },
+        {
+            "id": 50,
+            "name": "50.Tawang Jaya"
+        },
+        {
+            "id": 51,
+            "name": "51.Kutojaya Selatan"
+        },
+        {
+            "id": 52,
+            "name": "52.Tegal Arum"
+        },
+        {
+            "id": 53,
+            "name": "53.Tawang Alun"
+        },
+        {
+            "id": 54,
+            "name": "54.Tegal Ekspres"
+        },
+        {
+            "id": 55,
+            "name": "55.Maharani"
+        },
+        {
+            "id": 56,
+            "name": "56.Kalijaga"
+        },
+        {
+            "id": 57,
+            "name": "57.Probowangi"
+        },
+        {
+            "id": 58,
+            "name": "58.Serayu"
+        },
+        {
+            "id": 59,
+            "name": "59.Kamandeka"
+        },
+        {
+            "id": 60,
+            "name": "60.Joglokerto"
+        }
+    ]
+}
