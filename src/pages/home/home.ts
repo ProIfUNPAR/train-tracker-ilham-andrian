@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 
 import {
   GoogleMaps,
@@ -20,6 +20,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http'
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 
 @Component({
   selector: 'page-home',
@@ -39,6 +41,9 @@ export class HomePage {
   watch: any;
   eta: any;
   keretaTujuan = 0;
+  item:any;
+  latLangAwal : ILatLng;
+  latLangAkhir : ILatLng;
 
   //-----hardcode kereta---------//
   trains = [];
@@ -53,7 +58,8 @@ export class HomePage {
     public zone: NgZone,
     private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation,
-    public http: Http) {
+    public http: Http
+    ) {
     this.loadJson();
   }
 
@@ -193,4 +199,41 @@ export class HomePage {
       }
     }
   }
+
+  getLatLangAwal(item){
+    for(var i=0;i<this.stations.length;i++){
+      if(item==this.stations[i].name){
+        this.latLangAwal = {lat : this.stations[i].Lang, lng : this.stations[i].Long};
+      }
+    }
+    console.log(this.latLangAwal);
+  }
+
+  getLatLangAkhir(item2){
+    for(var i=0;i<this.stations.length;i++){
+      if(item2==this.stations[i].name){
+        this.latLangAkhir = {lat : this.stations[i].Lang, lng : this.stations[i].Long};
+      }
+    }
+    console.log(this.latLangAkhir);
+  }
+
+  // alertMessage(){
+  //   this.platform.ready().then( () => {
+  //     if(this.distance>100 && this.distance<500){
+  //       this.localNotification.schedule({
+  //         id: 1,
+  //         title: 'Notif',
+  //         text : 'Bersiap, anda akan segera tiba di ' + this.stations[this.keretaTujuan].nama,
+  //       });
+  //     }
+  //     else{
+  //       this.localNotification.schedule({
+  //         id: 1,
+  //         title: 'Notif',
+  //         text : 'Anda sudah sampai di ' + this.stations[this.keretaTujuan].nama,
+  //       });
+  //     }
+  //   });
+  // }
 }
