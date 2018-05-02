@@ -20,7 +20,7 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http'
-import { LocalNotifications } from '@ionic-native/local-notifications';
+
 
 @Component({
   selector: 'page-home',
@@ -211,22 +211,22 @@ export class HomePage {
   }
 
   loadJson() {
-        this.http.get('.../.../assets/data/train.json').map(res => res.json()).subscribe(data => {
+        this.http.get('./assets/data/train.json').map(res => res.json()).subscribe(data => {
         this.trains = data.trains;
    });
   }
 
-  onCreate(selectedValue){
-    this.selectedStations(selectedValue);
-  }
-
-  selectedStations(value){
-    for(var i=0;i<this.trains.length;i++){
-      if(value==this.trains[i].name){
+ selectedStation(sTrain){
+   for(var i = 0;i<this.trains.length;i++){
+      if(sTrain.name = this.trains[i].name){
         this.stations = this.trains[i].station;
       }
-    }
-  }
+   }
+ }
+
+
+
+
 
   
 }
