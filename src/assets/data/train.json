@@ -38,239 +38,3798 @@
         },
         {
             "id": 2,
-            "name": "2.Argo Jati"
+            "name": "2.Argo Jati",
+            "station": [
+                {
+                    "name": "Gambir (GMR)",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Jatinegara (JNG)",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Bekasi (BKS)",
+                    "Lat": "-6.246864",
+                    "Long": "107.018143"
+                },
+                {
+                    "nama": "Jatibarang (JTB)",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Cirebon (CRB)",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                }
+            ]
         },
         {
             "id": 3,
-            "name": "3.Harina"
+            "name": "3.Harina",
+            "station":  [
+                {
+                    "name": "Surabaya Pasarturi",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Lamongan",
+                    "Lat": "-7.112678",
+                    "Long": "112.420030"
+                },
+                {
+                    "nama": "Bojonegoro",
+                    "Lat": "-7.164280",
+                    "Long": "111.886684"
+                },
+                {
+                    "nama": "Cepu",
+                    "Lat": "-7.141686",
+                    "Long": "111.597201"
+                },
+                {
+                    "nama": "Ngrombo",
+                    "Lat": "-7.145437",
+                    "Long": "110.900773"
+                },
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Purwakarta",
+                    "Lat": "-6.552785",
+                    "Long": "107.446471"
+                },
+                {
+                    "nama": "Padalarang",
+                    "Lat": "-6.842957",
+                    "Long": "107.497321"
+                },
+                {
+                    "nama": "Cimahi",
+                    "Lat": "-6.885747",
+                    "Long": "107.536122"
+                },
+                {
+                    "nama": "Bandung (BDO)",
+                    "Lat": "-6.914632",
+                    "Long": "107.602438"
+                }
+            ]
         },
         {
             "id": 4,
-            "name": "4.Lodaya"
+            "name": "4.Lodaya",
+            "station": [
+                {
+                    "name": "Bandung (BDO)",
+                    "lat": "-6.914632",
+                    "long": "107.602438"
+                },
+                {
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Cicalengka",
+                    "Lat": "-6.981492",
+                    "Long": "107.832652"
+                },
+                {
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+                {
+                    "nama": "Ciamis",
+                    "Lat": "-7.329145",
+                    "Long": "108.356002"
+                },
+                {
+                    "nama": "Sidareja",
+                    "Lat": "-7.486345",
+                    "Long": "108.807519"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+                {
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                }
+            ]
         },
         {
             "id": 5,
-            "name": "5.Ciremai Ekspres"
+            "name": "5.Ciremai Ekspres",            
+            "station": [
+                {
+                    "name": "Bandung (BDO)",
+                    "lat": "-6.914632",
+                    "long": "107.602438"
+                },
+                {
+                    "nama": "Cimahi",
+                    "Lat": "-6.885747",
+                    "Long": "107.536122"
+                },
+                {
+                    "nama": "Purwakarta",
+                    "Lat": "-6.552785",
+                    "Long": "107.446471"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                }
+            ]
         },
         {
             "id": 6,
-            "name": "6.Malabar"
+            "name": "6.Malabar",            
+            "station": [
+                {
+                    "name": "Bandung (BDO)",
+                    "lat": "-6.914632",
+                    "long": "107.602438"
+                },
+                {
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+                {
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Kediri",
+                    "Lat": "-7.817230",
+                    "Long": "112.015549"
+                },
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                }
+            ]
         },
         {
             "id": 7,
-            "name": "7.Argo Bromo Anggrek"
+            "name": "7.Argo Bromo Anggrek",            
+            "station": [
+                {
+                    "name": "Gambir",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "106.830636"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama": "Bojonegoro",
+                    "Lat": "-7.164280",
+                    "Long": "111.886684"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-7.243142",
+                    "Long": "112.744042"
+                }
+            ]
         },
         {
             "id": 8,
-            "name": "8.Argo Willis"
+            "name": "8.Argo Willis",            
+            "station": [
+                {
+                    "name": "Surabaya Kota",
+                    "lat": "-7.243142",
+                    "long": "112.744042"
+                },
+                {
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Yogyakarta",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+                {
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Bandung",
+                    "Lat": "-6.914632",
+                    "Long": "107.602438"
+                }
+            ]
         },
         {
             "id": 9,
-            "name": "9.Argo Lawu"
+            "name": "9.Argo Lawu",            
+            "station": [
+                {
+                    "name": "Solo Balapan",
+                    "lat": "-7.557016",
+                    "long": "110.821417"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+                {
+                    "nama": "Yogyakarta",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 10,
-            "name": "10.Argo Dwipangga"
+            "name": "10.Argo Dwipangga",                        
+            "station": [
+                {
+                    "name": "Solo Balapan",
+                    "lat": "-7.557016",
+                    "long": "110.821417"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+                {
+                    "nama": "Yogyakarta",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 11,
-            "name": "11.Argo Sindoro"
+            "name": "11.Argo Sindoro",                        
+            "station": [
+                {
+                    "name": "Semarang Tawang",
+                    "lat": "-6.964446",
+                    "long": "110.427923"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 12,
-            "name": "12.Argo Muria"
+            "name": "12.Argo Muria",                        
+            "station": [
+                {
+                    "name": "Semarang Tawang",
+                    "lat": "-6.964446",
+                    "long": "110.427923"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 13,
-            "name": "13.Bima"
+            "name": "13.Bima",            
+            "station": [
+                {
+                    "name": "Gambir",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.246864",
+                    "Long": "107.018143"
+                },
+                {
+                    "nama": "Cikarang",
+                    "Lat": "-6.255393",
+                    "Long": "107.145129"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Jombang",
+                    "Lat": "-7.558042",
+                    "Long": "112.233614"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Sidoarjo",
+                    "Lat": "-7.456970",
+                    "Long": "112.713512"
+                },
+                {
+                    "nama": "Lawang",
+                    "Lat": "-7.836726",
+                    "Long": "112.697624"
+                },
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                }
+            ]
         },
         {
             "id": 14,
-            "name": "14.Sembrani"
+            "name": "14.Sembrani",                        
+            "station": [
+                {
+                    "name": "Gambir",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama": "Bojonegoro",
+                    "Lat": "-7.164280",
+                    "Long": "111.886684"
+                },
+                {
+                    "nama": "Surabaya Pasar Turi",
+                    "Lat": "-7.248603",
+                    "Long": "112.731504"
+                }
+            ]
         },
         {
             "id": 15,
-            "name": "15.Turangga"
+            "name":  "15.Turangga",
+            "station": [
+                {
+                    "name": "Surabaya",
+                    "lat": "-7.243142",
+                    "long": "112.744042"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-6.889687",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Yogyakarta Kota",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+                {
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Bandung Kota",
+                    "Lat": "-6.914632",
+                    "Long": "107.602438"
+                }
+            ]
         },
         {
             "id": 16,
-            "name": "16.Taksaka"
+            "name": "16.Taksaka",                        
+            "station": [
+                {
+                    "name": "Yogyakarta",
+                    "lat": "-7.789200",
+                    "long": "110.363487"
+                },
+                {
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+                {
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+                {
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 17,
-            "name": "17.Bangunkarta"
+            "name": "17.Bangunkarta",
+            "station": [
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-6.889687",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Solo Jebres",
+                    "Lat": "-7.562218",
+                    "Long": "110.839498"
+                },
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama": "Gambir",
+                    "Lat": "-6.176773",
+                    "Long": "106.830636"
+                }
+            ]
         },
         {
             "id": 18,
-            "name": "18.Purwojaya"
+            "name": "18.Purwojaya",
+            "station": [
+                {
+                    "nama":"Cilacap", 
+                    "Lat":"-7.736046",
+                    "Long":"109.007070"
+                },
+                {
+                    "nama":"Maos", 
+                    "Lat":"-7.619092",
+                    "Long":"109.139473"
+                },
+                {
+                    "nama":"Kroya", 
+                    "Lat":"-7.619092",
+                    "Long":"109.139473"
+                },
+                {
+                    "nama":"Purwokerto", 
+                    "Lat":"-7.419224",
+                    "Long":"109.221922"
+                },
+                {
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+                {
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+                {
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                },
+                {
+                    "nama":"Gambir", 
+                    "Lat":"-6.176773",
+                    "Long":"106.830636"
+                }
+            ]
         },
         {
             "id": 19,
-            "name": "19.Cirebon Ekspres"
+            "name": "19.Cirebon Ekspres",
+            "station": [
+                {
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+                {
+                    "nama":"Arjawinangun", 
+                    "Lat":"-6.644662",
+                    "Long":"108.414541"
+                },
+                {
+                    "nama":"Jatibarang", 
+                    "Lat":"-6.473090",
+                    "Long":"108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama":"Cikampek", 
+                    "Lat":"-6.406377",
+                    "Long":"107.458952"
+                },
+                {
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+                {
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                }
+            ]
         },
         {
             "id": 20,
-            "name": "20.Tegal Bahari"
+            "name": "20.Tegal Bahari",
+            "station": [
+                {
+                    "nama":"Tegal", 
+                    "Lat":"-6.867349",
+                    "Long":"109.142690"
+                },
+                {
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+				{
+                    "nama":"Tanjung", 
+                    "Lat":"-6.876942",
+                    "Long":"108.860409"
+                },
+				{
+                    "nama":"Losari", 
+                    "Lat":"-6.846385",
+                    "Long":"108.798260"
+                },
+				{
+                    "nama":"Babakan", 
+                    "Lat":"-6.860797",
+                    "Long":"108.719836"
+                },
+				{
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+				{
+                    "nama":"Arjawinangun", 
+                    "Lat":"-6.644662",
+                    "Long":"108.414541"
+                },
+                {
+                    "nama":"Jatibarang", 
+                    "Lat":"-6.473090",
+                    "Long":"108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+                {
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                },
+                {
+                    "nama":"Gambir", 
+                    "Lat":"-6.176773",
+                    "Long":"106.830636"
+                }
+            ]
         },
         {
             "id": 21,
-            "name": "21.Gumarang"
+            "name": "21.Gumarang",
+            "station": [
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                },
+                {
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                },
+				{
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+				{
+                    "nama":"Cikampek", 
+                    "Lat":"-6.406377",
+                    "Long":"107.458952"
+                },
+				{
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+				{
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+				{
+                    "nama":"Tegal", 
+                    "Lat":"-6.867349",
+                    "Long":"109.142690"
+                },
+				{
+                    "nama":"Pemalang", 
+                    "Lat":"-6.887313",
+                    "Long":"109.388224"
+                },
+				{
+                    "nama":"Pekalongan", 
+                    "Lat":"-6.889687",
+                    "Long":"109.664380"
+                },
+                {
+                    "nama":"Semarang Tawang", 
+                    "Lat":"-6.964446",
+                    "Long":"110.427923"
+                },
+                {
+                    "nama":"Cepu", 
+                    "Lat":"-7.154509",
+                    "Long":"111.590825"
+                },
+                {
+                    "nama":"Bojonegoro", 
+                    "Lat":"-7.164280",
+                    "Long":"111.886684"
+                },
+                {
+                    "nama":"Surabaya PasarTuri", 
+                    "Lat":"-7.248603",
+                    "Long":"112.731504"
+                }
+            ]
         },
         {
             "id": 22,
-            "name": "22.Sancaka"
+            "name": "22.Sancaka",
+            "station": [
+                {
+                    "nama":"Surabaya Gubeng", 
+                    "Lat":"-7.265678",
+                    "Long":"112.752035"
+                },
+                {
+                    "nama":"Mojokerto", 
+                    "Lat":"-7.472167",
+                    "Long":"112.434921"
+                },
+				{
+                    "nama":"Jombang", 
+                    "Lat":"-7.558042",
+                    "Long":"112.233614"
+                },
+				{
+                    "nama":"Nganjuk", 
+                    "Lat":"-7.600247",
+                    "Long":"111.902752"
+                },
+				{
+                    "nama":"Madiun", 
+                    "Lat":"-7.618830",
+                    "Long":"111.524395"
+                },
+				{
+                    "nama":"Solo Balapan", 
+                    "Lat":"-7.557016",
+                    "Long":"110.821417"
+                },
+				{
+                    "nama":"Klaten", 
+                    "Lat":"-7.712342",
+                    "Long":"110.603024"
+                },
+				{
+                    "nama":"Yogyakarta", 
+                    "Lat":"-7.789200",
+                    "Long":"110.363487"
+                }
+            ]
         },
         {
             "id": 23,
-            "name": "23.Mutiara Timur"
+            "name": "23.Mutiara Timur",
+            "station": [
+                {
+                    "nama":"Banyuwangi Baru", 
+                    "Lat":"-8.141180",
+                    "Long":"114.397142"
+                },
+                {
+                    "nama":"Karangasem", 
+                    "Lat":"-8.222879",
+                    "Long":"114.340794"
+                },
+				{
+                    "nama":"Rogojampi", 
+                    "Lat":"-8.304502",
+                    "Long":"114.292582"
+                },
+				{
+                    "nama":"Temuguruh", 
+                    "Lat":"-8.309794",
+                    "Long":"114.201957"
+                },
+				{
+                    "nama":"Kalisetail", 
+                    "Lat":"-8.302854",
+                    "Long":"114.139770"
+                },
+				{
+                    "nama":"Kalibaru", 
+                    "Lat":"-8.288862",
+                    "Long":"113.984387"
+                },
+				{
+                    "nama":"Kalisat", 
+                    "Lat":"-8.126871",
+                    "Long":"113.812322"
+                },
+				{
+                    "nama":"Jember", 
+                    "Lat":"-8.164787",
+                    "Long":"113.703603"
+                },
+				{
+                    "nama":"Rambipuji", 
+                    "Lat":"-8.203397",
+                    "Long":"113.614409"
+                },
+                {
+                    "nama":"Tanggul", 
+                    "Lat":"-8.162861",
+                    "Long":"113.448379"
+                },
+                {
+                    "nama":"Probolinggo", 
+                    "Lat":"-7.742787",
+                    "Long":"113.216008"
+                },
+                {
+                    "nama":"Bangil", 
+                    "Lat":"-7.598891",
+                    "Long":"112.778317"
+                },
+                {
+                    "nama":"Sidoarjo", 
+                    "Lat":"-7.456970",
+                    "Long":"112.713512"
+                },
+                {
+                    "nama":"Surabaya Gubeng", 
+                    "Lat":"-7.265678",
+                    "Long":"112.752035"
+                }
+            ]
         },
         {
             "id": 24,
-            "name": "24.Malioboro"
+            "name": "24.Malioboro Ekspres",
+            "station": [
+                {
+                    "nama":"Yogyakarta", 
+                    "Lat":"-7.789200",
+                    "Long":"110.363487"
+                },
+                {
+                    
+                    "nama":"Solo Balapan", 
+                    "Lat":"-7.557016",
+                    "Long":"110.821417"
+                },
+				{
+                    "nama":"Sragen", 
+                    "Lat":"-7.429322",
+                    "Long":"111.017844"
+                },
+				{
+                    "nama":"Kedunggalar", 
+                    "Lat":"-7.418260",
+                    "Long":"111.306623"
+                },
+				{
+                    "nama":"Madiun", 
+                    "Lat":"-7.618830",
+                    "Long":"111.524395"
+                },
+				{
+                    "nama":"Nganjuk", 
+                    "Lat":"-7.600247",
+                    "Long":"111.902752"
+                },
+				{
+                    "nama":"Kediri", 
+                    "Lat":"-7.817230",
+                    "Long":"112.015549"
+                },
+				{
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama":"Blitar", 
+                    "Lat":"-8.101338",
+                    "Long":"112.162802"
+                },
+                {
+                    "nama":"Kepanjen", 
+                    "Lat":"-8.131976",
+                    "Long":"112.573285"
+                },
+                {
+                    "nama":"Malang", 
+                    "Lat":"-7.977497",
+                    "Long":"112.637028"
+                }
+            ]
         },
         {
             "id": 25,
-            "name": "25.Pangrango/Siliwangi"
+            "name": "25.Pangrango/Siliwangi",
+            "station": [
+                {
+                    "nama":"Bogor", 
+                    "Lat":"-6.595616",
+                    "Long":"106.790425"
+                },
+                {
+                    "nama":"Karangtengah", 
+                    "Lat":"-6.896091",
+                    "Long":"106.822427"
+                },
+				{
+                    "nama":"Sukabumi", 
+                    "Lat":"-6.925075",
+                    "Long":"106.929587"
+                },
+				{
+                    "nama":"Cireungas", 
+                    "Lat":"-6.958534",
+                    "Long":"107.037211"
+                },
+				{
+                    "nama":"Lampegan", 
+                    "Lat":"-6.950032",
+                    "Long":"107.061359"
+                },
+				{
+                    "nama":"Cibeber", 
+                    "Lat":"-6.914591",
+                    "Long":"107.492397"
+                },
+				{
+                    "nama":"Cilaku", 
+                    "Lat":"-6.331662",
+                    "Long":"106.434452"
+                },
+				{
+                    "nama":"Cianjur", 
+                    "Lat":"-6.824585",
+                    "Long":"107.142728"
+                }
+            ]
         },
         {
             "id": 26,
-            "name": "26.Mutiara Selatan"
+            "name": "26.Mutiara Selatan",
+            "station": [
+                {
+                    "nama":"Malang", 
+                    "Lat":"-7.977497",
+                    "Long":"112.637028"
+                },
+                {
+                    "nama":"Lawang", 
+                    "Lat":"-7.836726",
+                    "Long":"112.697624"
+                },
+				{
+                    "nama":"Sidoarjo", 
+                    "Lat":"-7.456970",
+                    "Long":"112.713512"
+                },
+				{
+                    "nama":"Wonokromo", 
+                    "Lat":"-7.302734",
+                    "Long":"112.737804"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+				{
+                    "nama":"Kertosono", 
+                    "Lat":"-7.592115",
+                    "Long":"112.100625"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+				{
+                    "nama":"Lempuyangan", 
+                    "Lat":"-7.790230",
+                    "Long":"110.375782"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+				{
+                    "nama":"Karanganyar", 
+                    "Lat":"-7.633169",
+                    "Long":"109.573493"
+                },
+                {
+                    "nama":"Banjar", 
+                    "Lat":"-7.376285",
+                    "Long":"108.542423"
+                },
+                {
+                    "nama":"Tasikmalaya", 
+                    "Lat":"-7.322348",
+                    "Long":"108.223811"
+                },
+                {
+                    "nama":"Kiaracondong", 
+                    "Lat":"-6.924956",
+                    "Long":"107.646302"
+                },
+                {
+                    "nama":"Bandung", 
+                    "Lat":"-6.914632",
+                    "Long":"107.602438"
+                }
+            ]
         },
         {
             "id": 27,
-            "name": "27.Utama Solo"
+            "name": "27.Utama Solo",
+            "station": [
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+				{
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 28,
-            "name": "28.Utama Yogya"
+            "name": "28.Utama Yogya",
+            "station": [
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama":"Wates", 
+                    "Lat":"-7.859558",
+                    "Long":"110.157929"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Linggapura", 
+                    "Lat":"-7.184912",
+                    "Long":"109.012478"
+                },
+				{
+                    "nama":"Ketanggungan", 
+                    "Lat":"-6.938286",
+                    "Long":"108.884382"
+                },
+				{
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 29,
-            "name": "29.Sawunggalih"
+            "name": "29.Sawunggalih",
+            "station": [
+                {
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+                {
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Bumiayu", 
+                    "Lat":"-7.237399",
+                    "Long":"109.009802"
+                },
+				{
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+				{
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 30,
-            "name": "30.Sarangan Ekspres"
+            "name": "30.Sarangan Ekspres",
+            "station": [
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+				{
+                    "nama": "Jombang",
+                    "Lat": "-7.558042",
+                    "Long": "112.233614"
+                },
+				{
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama":"Nganjuk", 
+                    "Lat":"-7.600247",
+                    "Long":"111.902752"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                }
+            ]
         },
         {
             "id": 31,
-            "name": "31.S"id"omukti"
+            "name": "31.Sidomukti",
+            "station": [
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+				{
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama":"Brambanan", 
+                    "Lat":"-7.756562",
+                    "Long":"110.500426"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+				{
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                }
+            ]
         },
         {
             "id": 32,
-            "name": "32.Majapahit"
+            "name": "32.Majapahit",
+            "station": [
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                },
+                {
+                    "nama":"Kesamben", 
+                    "Lat":"-8.149212",
+                    "Long":"112.363486"
+                },
+				{
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama":"Kedungjati", 
+                    "Lat":"-7.163653",
+                    "Long":"110.635626"
+                },
+				{
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 33,
-            "name": "33.Jayabaya"
+            "name": "33.Jayabaya",
+            "station": [
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+				{
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+				{
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+				{
+                    "nama":"Semarang Poncol", 
+                    "Lat":"-6.972837",
+                    "Long":"110.414697"
+                },
+				{
+                    "nama": "Cepu",
+                    "Lat": "-7.141686",
+                    "Long": "111.597201"
+                },
+				{
+                    "name": "Surabaya Pasarturi",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+				{
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+				{
+                    "nama": "Sidoarjo",
+                    "Lat": "-7.456970",
+                    "Long": "112.713512"
+                },
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                }
+            ]
         },
         {
             "id": 34,
-            "name": "34.Jaka Tingkir"
+            "name": "34.Jaka Tingkir",
+            "station": [
+                {
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+				{
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+				{
+                    "nama":"Jenar", 
+                    "Lat":"-7.802102",
+                    "Long":"110.000583"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+                {
+                    "nama":"Ciledug", 
+                    "Lat":"-6.903085",
+                    "Long":"108.743935"
+                },
+                {
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 35,
-            "name": "35.Menoreh"
+            "name": "35.Menoreh",
+            "station": [
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama":"Weleri", 
+                    "Lat":"-6.970883",
+                    "Long":"110.069743"
+                },
+				{
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+				{
+                    "nama":"Pemalang", 
+                    "Lat":"-6.887313",
+                    "Long":"109.388224"
+                },
+				{
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+				{
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+				{
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 36,
-            "name": "36.Bogowonto"
+            "name": "36.Bogowonto",
+            "station": [
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+				{
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+                {
+                    "nama":"Ketanggungan", 
+                    "Lat":"-6.938286",
+                    "Long":"108.884382"
+                },
+                {
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 37,
-            "name": "37.Gajah Wong"
+            "name": "37.Gajah Wong",
+            "station": [
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+				{
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+                {
+                    "nama":"Ketanggungan", 
+                    "Lat":"-6.938286",
+                    "Long":"108.884382"
+                },
+                {
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 38,
-            "name": "38.Karakatau"
+            "name": "38.Krakatau Ekspres",
+            "station": [
+                {
+                    "nama":"Blitar", 
+                    "Lat":"-8.101338",
+                    "Long":"112.162802"
+                },
+                {
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama": "Kediri",
+                    "Lat": "-7.817230",
+                    "Long": "112.015549"
+                },
+				{
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama":"Walikukum", 
+                    "Lat":"-7.398847",
+                    "Long":"111.224696"
+                },
+				{
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+				{
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+                {
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 39,
-            "name": "39.Matarmaja"
+            "name": "39.Matarmaja",
+            "station": [
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                },
+                {
+                    "nama":"Kesamben", 
+                    "Lat":"-8.149212",
+                    "Long":"112.363486"
+                },
+				{
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama":"Kedungjati", 
+                    "Lat":"-7.163653",
+                    "Long":"110.635626"
+                },
+				{
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 40,
-            "name": "40.Gaya Baru Malam Selatan"
+            "name": "40.Gaya Baru Malam Selatan",
+            "station": [
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama":"Wonokromo", 
+                    "Lat":"-7.302734",
+                    "Long":"112.737804"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+                {
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+				{
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 41,
-            "name": "41.Brantas"
+            "name": "41.Brantas",
+            "station": [
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.942519",
+                    "Long": "112.610089"
+                },
+                {
+                    "nama":"Blitar", 
+                    "Lat":"-8.101338",
+                    "Long":"112.162802"
+                },
+				{
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama":"Kedungjati", 
+                    "Lat":"-7.163653",
+                    "Long":"110.635626"
+                },
+				{
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 42,
-            "name": "42.Kertajaya"
+            "name": "42.Kertajaya",
+            "station": [
+                {
+                    "name": "Surabaya Pasarturi",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                },
+                {
+                    "nama": "Lamongan",
+                    "Lat": "-7.112678",
+                    "Long": "112.420030"
+                },
+                {
+                    "nama": "Bojonegoro",
+                    "Lat": "-7.164280",
+                    "Long": "111.886684"
+                },
+                {
+                    "nama": "Cepu",
+                    "Lat": "-7.141686",
+                    "Long": "111.597201"
+                },
+                {
+                    "nama": "Ngrombo",
+                    "Lat": "-7.145437",
+                    "Long": "110.900773"
+                },
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+				{
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+				{
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+				{
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 43,
-            "name": "43.Pasundan"
+            "name": "43.Pasundan",
+            "station": [
+                {
+                    "name": "Surabaya Kota",
+                    "lat": "-7.243142",
+                    "long": "112.744042"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Jombang",
+                    "Lat": "-7.558042",
+                    "Long": "112.233614"
+                },
+				{
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama":"Nganjuk", 
+                    "Lat":"-7.600247",
+                    "Long":"111.902752"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama": "Yogyakarta Kota",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+				{
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama":"Banjar", 
+                    "Lat":"-7.376285",
+                    "Long":"108.542423"
+                },
+				{
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+				{
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Bandung",
+                    "Lat": "-6.914632",
+                    "Long": "107.602438"
+                }
+            ]
         },
         {
             "id": 44,
-            "name": "44.Kahuripan"
+            "name": "44.Kahuripan",
+            "station": [
+                {
+                    "name": "Bandung (BDO)",
+                    "lat": "-6.914632",
+                    "long": "107.602438"
+                },
+                {
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                },
+                {
+                    "nama": "Cicalengka",
+                    "Lat": "-6.981492",
+                    "Long": "107.832652"
+                },
+                {
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+                {
+                    "nama": "Ciamis",
+                    "Lat": "-7.329145",
+                    "Long": "108.356002"
+                },
+                {
+                    "nama": "Sidareja",
+                    "Lat": "-7.486345",
+                    "Long": "108.807519"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+                {
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+                {
+                    "nama": "Yogyakarta Tugu",
+                    "Lat": "-7.789200",
+                    "Long": "110.363487"
+                },
+                {
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+                {
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+				{
+                    "nama": "Solo Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+				{
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama": "Kediri",
+                    "Lat": "-7.817230",
+                    "Long": "112.015549"
+                },
+				{
+                    "nama":"Tulungagung", 
+                    "Lat":"-8.062896",
+                    "Long":"111.904488"
+                },
+				{
+                    "nama":"Blitar", 
+                    "Lat":"-8.101338",
+                    "Long":"112.162802"
+                },
+                {
+                    "nama":"Kepanjen", 
+                    "Lat":"-8.131976",
+                    "Long":"112.573285"
+                },
+                {
+                    "nama":"Malang", 
+                    "Lat":"-7.977497",
+                    "Long":"112.637028"
+                }
+            ]
         },
         {
             "id": 45,
-            "name": "45.Bengawan"
+            "name": "45.Bengawan",
+            "station": [
+                {
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                },
+				{
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+				{
+                    "nama":"Jenar", 
+                    "Lat":"-7.802102",
+                    "Long":"110.000583"
+                },
+				{
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+                {
+                    "nama":"Tambak", 
+                    "Lat":"-7.612921",
+                    "Long":"109.408565"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+                {
+                    "nama":"Ciledug", 
+                    "Lat":"-6.903085",
+                    "Long":"108.743935"
+                },
+                {
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.473090",
+                    "Long": "108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 46,
-            "name": "46.Progo"
+            "name": "46.Progo",
+            "station": [
+                {
+                    "nama":"Lempuyungan", 
+                    "Lat":"-7.790230",
+                    "Long":"110.375782"
+                },
+                {
+                    "nama":"Jogjakarta", 
+                    "Lat":"-7.789200",
+                    "Long":"110.363487"
+                },
+				{
+                    "nama":"Wates", 
+                    "Lat":"-7.859558",
+                    "Long":"110.157929"
+                },
+				{
+                    "nama":"Kutoarjo", 
+                    "Lat":"-7.726044",
+                    "Long":"109.907126"
+                },
+				{
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama":"Kroya", 
+                    "Lat":"-7.630120",
+                    "Long":"109.253538"
+                },
+				{
+                    "nama":"Purwokerto", 
+                    "Lat":"-7.419224",
+                    "Long":"109.221922"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                }
+            ]
         },
         {
             "id": 47,
-            "name": "47.Logawa"
+            "name": "47.Logawa",
+            "station": [
+                {
+                    "nama":"Purwokerto", 
+                    "Lat":"-7.419224",
+                    "Long":"109.221922"
+                },
+                {
+                    "nama":"Kroya", 
+                    "Lat":"-7.630120",
+                    "Long":"109.253538"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama":"Karanganyar", 
+                    "Lat":"-7.633169",
+                    "Long":"109.573493"
+                },
+				{
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama":"Kutoarjo", 
+                    "Lat":"-7.726044",
+                    "Long":"109.907126"
+                },
+				{
+                    "nama": "Wates",
+                    "Lat": "-7.859558",
+                    "Long": "110.157929"
+                },
+				{
+                    "nama":"Lempuyungan", 
+                    "Lat":"-7.790230",
+                    "Long":"110.375782"
+                },
+                {
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+                {
+                    "nama":"Solo Jebres", 
+                    "Lat":"-7.562218",
+                    "Long":"110.839498"
+                },                
+                {
+                    "nama":"Sragen", 
+                    "Lat":"-7.429322",
+                    "Long":"111.017844"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+                {
+                    "nama":"Nganjuk", 
+                    "Lat":"-7.600247",
+                    "Long":"111.902752"
+                },
+                {
+                    "nama": "Jombang",
+                    "Lat": "-7.558042",
+                    "Long": "112.233614"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama": "Sidoarjo",
+                    "Lat": "-7.456970",
+                    "Long": "112.713512"
+                },
+                {
+                    "nama":"Bangil", 
+                    "Lat":"-7.598891",
+                    "Long":"112.778317"
+                },
+                {
+                    "nama":"Probolinggo", 
+                    "Lat":"-7.742787",
+                    "Long":"113.216008"
+                },
+                {
+                    "nama":"Tanggul", 
+                    "Lat":"-8.162861",
+                    "Long":"113.448379"
+                },
+                {
+                    "nama":"Rambipuji", 
+                    "Lat":"-8.203397",
+                    "Long":"113.614409"
+                },
+                {
+                    "nama":"Jember", 
+                    "Lat":"-8.164787",
+                    "Long":"113.703603"
+                }
+            ]
         },
         {
             "id": 48,
-            "name": "48.Kutojaya Utara"
+            "name": "48.Kutojaya Utara",
+            "station": [
+                {
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+                {
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+				{
+                    "nama":"Bumiayu", 
+                    "Lat":"-7.237399",
+                    "Long":"109.009802"
+                },
+                {
+                    "nama":"Prupuk", 
+                    "Lat":"-7.122791",
+                    "Long":"108.982702"
+                },
+                {
+                    "nama": "Cirebon",
+                    "Lat": "-6.705386",
+                    "Long": "108.555444"
+                },
+                {
+                    "nama": "Cikampek",
+                    "Lat": "-6.406377",
+                    "Long": "107.458952"
+                },
+                {
+                    "nama": "Bekasi",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+				{
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 49,
-            "name": "49.Sri Tanjung"
+            "name": "49.Sri Tanjung",
+            "station": [
+                {
+                    "nama":"Banyuwangi Baru", 
+                    "Lat":"-8.141180",
+                    "Long":"114.397142"
+                },
+                {
+                    "nama":"Karangasem", 
+                    "Lat":"-8.222879",
+                    "Long":"114.340794"
+                },
+				{
+                    "nama":"Rogojampi", 
+                    "Lat":"-8.304502",
+                    "Long":"114.292582"
+                },
+                {
+                    "nama":"Tegumuruh", 
+                    "Lat":"-8.309794",
+                    "Long":"114.201957"
+                },
+                {
+                    "nama":"Kalisetail", 
+                    "Lat":"-8.302854",
+                    "Long":"114.139770"
+                },
+				{
+                    "nama":"Kalibaru", 
+                    "Lat":"-8.288862",
+                    "Long":"113.984387"
+                },
+				{
+                    "nama":"Kalisat", 
+                    "Lat":"-8.126871",
+                    "Long":"113.812322"
+                },
+				{
+                    "nama":"Jember", 
+                    "Lat":"-8.164787",
+                    "Long":"113.703603"
+                },
+				{
+                    "nama":"Rambipuji", 
+                    "Lat":"-8.203397",
+                    "Long":"113.614409"
+                },
+                {
+                    "nama":"Tanggul", 
+                    "Lat":"-8.162861",
+                    "Long":"113.448379"
+                },
+                {
+                    "nama":"Probolinggo", 
+                    "Lat":"-7.742787",
+                    "Long":"113.216008"
+                },
+				{
+                    "nama":"Pasuruan", 
+                    "Lat":"-7.637873",
+                    "Long":"112.910010"
+                },
+                {
+                    "nama":"Bangil", 
+                    "Lat":"-7.598891",
+                    "Long":"112.778317"
+                },
+                {
+                    "nama": "Sidoarjo",
+                    "Lat": "-7.456970",
+                    "Long": "112.713512"
+                },
+				{
+                    "nama":"Wonokromo", 
+                    "Lat":"-7.302734",
+                    "Long":"112.737804"
+                },
+                {
+                    "nama": "Surabaya Gubeng",
+                    "Lat": "-7.265678",
+                    "Long": "112.752035"
+                },
+                {
+                    "nama":"Wonokromo", 
+                    "Lat":"-7.302734",
+                    "Long":"112.737804"
+                },
+                {
+                    "nama": "Mojokerto",
+                    "Lat": "-7.472167",
+                    "Long": "112.434921"
+                },
+                {
+                    "nama": "Jombang",
+                    "Lat": "-7.558042",
+                    "Long": "112.233614"
+                },
+                {
+                    "nama": "Kertosono",
+                    "Lat": "-7.592115",
+                    "Long": "112.100625"
+                },
+				{
+                    "nama":"Caruban", 
+                    "Lat":"-7.551138",
+                    "Long":"111.654806"
+                },
+                {
+                    "nama": "Madiun",
+                    "Lat": "-7.618830",
+                    "Long": "111.524395"
+                },
+				{
+                    "nama":"Sragen", 
+                    "Lat":"-7.429322",
+                    "Long":"111.017844"
+                },
+				{
+                    "nama":"Purwosari", 
+                    "Lat":"-7.561684",
+                    "Long":"110.796510"
+                },
+				{
+                    "nama": "Klaten",
+                    "Lat": "-7.712342",
+                    "Long": "110.603024"
+                },
+				{
+                    "nama": "Lempuyangan",
+                    "Lat": "-7.790230",
+                    "Long": "110.375782"
+                }
+            ]
         },
         {
             "id": 50,
-            "name": "50.Tawang Jaya"
+            "name": "50.Tawang Jaya",
+            "station": [
+                {
+                    "nama":"Semarang Poncol", 
+                    "Lat":"-6.972837",
+                    "Long":"110.414697"
+                },
+                {
+                    "nama":"Weleri", 
+                    "Lat":"-6.970883",
+                    "Long":"110.069743"
+                },
+				{
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+				{
+                    "nama":"Pemalang", 
+                    "Lat":"-6.887313",
+                    "Long":"109.388224"
+                },
+				{
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+				{
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+                {
+                    "nama":"Tanjung", 
+                    "Lat":"-6.876942",
+                    "Long":"108.860409"
+                },
+				{
+                    "nama":"Babakan", 
+                    "Lat":"-6.860797",
+                    "Long":"108.719836"
+                },
+				{
+                    "nama":"Cirebon Prujakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+				{
+                    "nama": "Jatibarang",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+				{
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama":"Cikampek", 
+                    "Lat":"-6.406377",
+                    "Long":"107.458952"
+                },
+                {
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+				{
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 51,
-            "name": "51.Kutojaya Selatan"
+            "name": "51.Kutojaya Selatan",
+            "station": [
+                {
+                    "nama": "Kutoarjo",
+                    "Lat": "-7.726044",
+                    "Long": "109.907126"
+                },
+                {
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+                {
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama":"Kawunganten", 
+                    "Lat":"-7.590977",
+                    "Long":"108.919144"
+                },
+				{
+                    "nama": "Sidareja",
+                    "Lat": "-7.486345",
+                    "Long": "108.807519"
+                },
+				{
+                    "nama": "Ciamis",
+                    "Lat": "-7.329145",
+                    "Long": "108.356002"
+                },
+				{
+                    "nama": "Tasikmalaya",
+                    "Lat": "-7.322348",
+                    "Long": "108.223811"
+                },
+				{
+                    "nama":"Cipendeuy", 
+                    "Lat":"-7.094600",
+                    "Long":"108.103213"
+                },
+				{
+                    "nama": "Cicalengka",
+                    "Lat": "-6.981492",
+                    "Long": "107.832652"
+                },
+				{
+                    "nama": "Kiaracondong",
+                    "Lat": "-6.924956",
+                    "Long": "107.646302"
+                }
+            ]
         },
         {
             "id": 52,
-            "name": "52.Tegal Arum"
+            "name": "52.Tegal Arum",
+            "station": [
+                {
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+                {
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+				{
+                    "nama":"Tanjung", 
+                    "Lat":"-6.876942",
+                    "Long":"108.860409"
+                },
+				{
+                    "nama":"Losari", 
+                    "Lat":"-6.846385",
+                    "Long":"108.798260"
+                },
+				{
+                    "nama":"Babakan", 
+                    "Lat":"-6.860797",
+                    "Long":"108.719836"
+                },
+				{
+                    "nama":"Cirebon Prunjakan", 
+                    "Lat":"-6.719337",
+                    "Long":"108.558802"
+                },
+                {
+                    "nama": "Jatibarang",
+                    "Lat": "-6.236144",
+                    "Long": "106.999420"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama":"Cikampek", 
+                    "Lat":"-6.406377",
+                    "Long":"107.458952"
+                },
+                {
+                    "nama":"Bekasi", 
+                    "Lat":"-6.236144",
+                    "Long":"106.999420"
+                },
+                {
+                    "nama":"Jatinegara", 
+                    "Lat":"-6.215291",
+                    "Long":"106.870162"
+                },
+				{
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 53,
-            "name": "53.Tawang Alun"
+            "name": "53.Tawang Alun",
+            "station": [
+                {
+                    "nama":"Banyuwangi Baru", 
+                    "Lat":"-8.141180",
+                    "Long":"114.397142"
+                },
+                {
+                    "nama":"Karangasem", 
+                    "Lat":"-8.222879",
+                    "Long":"114.340794"
+                },
+				{
+                    "nama":"Rogojampi", 
+                    "Lat":"-8.304502",
+                    "Long":"114.292582"
+                },
+				{
+                    "nama":"Temuguruh", 
+                    "Lat":"-8.309794",
+                    "Long":"114.201957"
+                },
+				{
+                    "nama":"Kalisetail", 
+                    "Lat":"-8.302854",
+                    "Long":"114.139770"
+                },
+				{
+                    "nama":"Kalibaru", 
+                    "Lat":"-8.288862",
+                    "Long":"113.984387"
+                },
+				{
+                    "nama":"Kalisat", 
+                    "Lat":"-8.126871",
+                    "Long":"113.812322"
+                },
+				{
+                    "nama":"Jember", 
+                    "Lat":"-8.164787",
+                    "Long":"113.703603"
+                },
+				{
+                    "nama":"Rambipuji", 
+                    "Lat":"-8.203397",
+                    "Long":"113.614409"
+                },
+                {
+                    "nama":"Tanggul", 
+                    "Lat":"-8.162861",
+                    "Long":"113.448379"
+                },
+                {
+                    "nama":"Jatiroto", 
+                    "Lat":"-8.123326",
+                    "Long":"113.364149"
+                },
+                {
+                    "nama":"Probolinggo", 
+                    "Lat":"-7.742787",
+                    "Long":"113.216008"
+                },
+                {
+                    "nama":"Pasuruan", 
+                    "Lat":"-7.637873",
+                    "Long":"112.910010"
+                },
+                {
+                    "nama":"Bangil", 
+                    "Lat":"-7.598891",
+                    "Long":"112.778317"
+                },
+                {
+                    "nama": "Lawang",
+                    "Lat": "-7.836726",
+                    "Long": "112.697624"
+                },
+                {
+                    "nama": "Singosari",
+                    "Lat": "-7.897015",
+                    "Long": "112.666056"
+                },
+                {
+                    "nama": "Blimbing",
+                    "Lat": "-7.940000",
+                    "Long": "112.644948"
+                },
+                {
+                    "nama": "Malang",
+                    "Lat": "-7.977497",
+                    "Long": "112.637028"
+                },
+                {
+                    "nama": "Malang Kotalama",
+                    "Lat": "-7.994869",
+                    "Long": "112.632595"
+                }
+            ]
         },
         {
             "id": 54,
-            "name": "54.Tegal Ekspres"
+            "name": "54.Tegal Ekspres",
+            "station": [
+                {
+                    "nama":"Tegal", 
+                    "Lat":"-6.867349",
+                    "Long":"109.142690"
+                },
+                {
+                    "nama":"Brebes", 
+                    "Lat":"-6.874527",
+                    "Long":"109.043872"
+                },
+				{
+                    "nama":"Tanjung", 
+                    "Lat":"-6.876942",
+                    "Long":"108.860409"
+                },
+				{
+                    "nama":"Losari", 
+                    "Lat":"-6.846385",
+                    "Long":"108.798260"
+                },
+				{
+                    "nama":"Babakan", 
+                    "Lat":"-6.860797",
+                    "Long":"108.719836"
+                },
+				{
+                    "nama":"Cirebon", 
+                    "Lat":"-6.705386",
+                    "Long":"108.555444"
+                },
+				{
+                    "nama":"Arjawinangun", 
+                    "Lat":"-6.644662",
+                    "Long":"108.414541"
+                },
+                {
+                    "nama":"Jatibarang", 
+                    "Lat":"-6.473090",
+                    "Long":"108.306333"
+                },
+                {
+                    "nama":"Haurgeulis", 
+                    "Lat":"-6.458582",
+                    "Long":"107.940905"
+                },
+                {
+                    "nama":"Pegadenbaru", 
+                    "Lat":"-6.453758",
+                    "Long":"107.817097"
+                },
+                {
+                    "nama":"Cikampek", 
+                    "Lat":"-6.406377",
+                    "Long":"107.458952"
+                },
+                {
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+                {
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 55,
-            "name": "55.Maharani"
+            "name": "55.Maharani",
+            "station": [
+                {
+                    "nama":"Semarang Poncol", 
+                    "Lat":"-6.972837",
+                    "Long":"110.414697"
+                },
+                {
+                    "nama":"Ngrombo", 
+                    "Lat":"-7.145437",
+                    "Long":"110.900773"
+                },
+				{
+                    "nama": "Cepu",
+                    "Lat": "-7.141686",
+                    "Long": "111.597201"
+                },
+				{
+                    "nama": "Bojonegoro",
+                    "Lat": "-7.164280",
+                    "Long": "111.886684"
+                },
+				{
+                    "nama": "Lamongan",
+                    "Lat": "-7.112678",
+                    "Long": "112.420030"
+                },				
+				{
+                    "name": "Surabaya Pasarturi",
+                    "lat": "-6.176773",
+                    "long": "106.830636"
+                }
+            ]
         },
         {
             "id": 56,
-            "name": "56.Kalijaga"
+            "name": "56.Kalijaga",
+            "station": [
+                {
+                    "nama": "Balapan",
+                    "Lat": "-7.557016",
+                    "Long": "110.821417"
+                },
+                {
+                    "nama":"Salem", 
+                    "Lat":"-7.395575",
+                    "Long":"110.827295"
+                },
+				{
+                    "nama":"Gundih", 
+                    "Lat":"-7.218755",
+                    "Long":"110.899937"
+                },
+				{
+                    "nama":"Kedungjati", 
+                    "Lat":"-7.163653",
+                    "Long":"110.635626"
+                },
+				{
+                    "nama":"Brumbung", 
+                    "Lat":"-7.025717",
+                    "Long":"110.522047"
+                },
+				{
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+				{
+                    "nama":"Semarang Poncol", 
+                    "Lat":"-6.972837",
+                    "Long":"110.414697"
+                }
+            ]
         },
         {
             "id": 57,
-            "name": "57.Probowangi"
+            "name": "57.Probowangi",
+            "station": [
+                {
+                    "nama":"Karangasem", 
+                    "Lat":"-8.222879",
+                    "Long":"114.340794"
+                },
+				{
+                    "nama":"Rogojampi", 
+                    "Lat":"-8.304502",
+                    "Long":"114.292582"
+                },
+				{
+                    "nama":"Temuguruh", 
+                    "Lat":"-8.309794",
+                    "Long":"114.201957"
+                },
+				{
+                    "nama":"Kalisetail", 
+                    "Lat":"-8.302854",
+                    "Long":"114.139770"
+                },
+				{
+                    "nama":"Kalibaru", 
+                    "Lat":"-8.288862",
+                    "Long":"113.984387"
+                },
+				{
+                    "nama":"Kalisat", 
+                    "Lat":"-8.126871",
+                    "Long":"113.812322"
+                },
+				{
+                    "nama":"Jember", 
+                    "Lat":"-8.164787",
+                    "Long":"113.703603"
+                },
+				{
+                    "nama":"Rambipuji", 
+                    "Lat":"-8.203397",
+                    "Long":"113.614409"
+                },
+                {
+                    "nama":"Tanggul", 
+                    "Lat":"-8.162861",
+                    "Long":"113.448379"
+                },
+                {
+                    "nama":"Probolinggo", 
+                    "Lat":"-7.742787",
+                    "Long":"113.216008"
+                },
+                {
+                    "nama":"Bangil", 
+                    "Lat":"-7.598891",
+                    "Long":"112.778317"
+                },
+                {
+                    "nama":"Sidoarjo", 
+                    "Lat":"-7.456970",
+                    "Long":"112.713512"
+                },
+                {
+                    "nama":"Surabaya Gubeng", 
+                    "Lat":"-7.265678",
+                    "Long":"112.752035"
+                }
+            ]
         },
         {
             "id": 58,
-            "name": "58.Serayu"
+            "name": "58.Serayu",
+            "station": [
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                },
+                {
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama": "Sidareja",
+                    "Lat": "-7.486345",
+                    "Long": "108.807519"
+                },
+				{
+                    "nama":"Banjar", 
+                    "Lat":"-7.376285",
+                    "Long":"108.542423"
+                },
+                {
+                    "nama":"Tasikmalaya", 
+                    "Lat":"-7.322348",
+                    "Long":"108.223811"
+                },
+                {
+                    "nama":"Kiaracondong", 
+                    "Lat":"-6.924956",
+                    "Long":"107.646302"
+                },
+                {
+                    "nama":"Bandung", 
+                    "Lat":"-6.914632",
+                    "Long":"107.602438"
+                },
+				{
+                    "nama": "Cimahi",
+                    "Lat": "-6.885747",
+                    "Long": "107.536122"
+                },
+				{
+                    "nama": "Padalarang",
+                    "Lat": "-6.842957",
+                    "Long": "107.497321"
+                },
+				{
+                    "nama": "Purwakarta",
+                    "Lat": "-6.552785",
+                    "Long": "107.446471"
+                },
+				{
+                    "nama": "Jatinegara",
+                    "Lat": "-6.215291",
+                    "Long": "106.870162"
+                },
+				{
+                    "nama":"Pasar Senen", 
+                    "Lat":"-6.174953",
+                    "Long":"106.845401"
+                }
+            ]
         },
         {
             "id": 59,
-            "name": "59.Kamandeka"
+            "name": "59.Kamandeka",
+            "station": [
+                {
+                    "nama": "Semarang Tawang",
+                    "Lat": "-6.964446",
+                    "Long": "110.427923"
+                },
+                {
+                    "nama":"Semarang Poncol", 
+                    "Lat":"-6.972837",
+                    "Long":"110.414697"
+                },
+				{
+                    "nama":"Weleri", 
+                    "Lat":"-6.970883",
+                    "Long":"110.069743"
+                },
+				{
+                    "nama": "Pekalongan",
+                    "Lat": "-6.889687",
+                    "Long": "109.664380"
+                },
+				{
+                    "nama":"Pemalang", 
+                    "Lat":"-6.887313",
+                    "Long":"109.388224"
+                },
+				{
+                    "nama": "Tegal",
+                    "Lat": "-6.867349",
+                    "Long": "109.142690"
+                },
+				{
+                    "nama":"Slawi", 
+                    "Lat":"-6.981884",
+                    "Long":"109.136634"
+                },
+				{
+                    "nama":"Bumiayu", 
+                    "Lat":"-7.237399",
+                    "Long":"109.009802"
+                },
+				{
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                }
+            ]
         },
         {
             "id": 60,
-            "name": "60.Joglokerto"
+            "name": "60.Joglokerto",
+            "station": [
+                {
+                    "nama":"Jogjakarta", 
+                    "Lat":"-7.789200",
+                    "Long":"110.363487"
+                },
+				{
+                    "nama":"Wates", 
+                    "Lat":"-7.859558",
+                    "Long":"110.157929"
+                },
+				{
+                    "nama":"Jenar", 
+                    "Lat":"-7.802102",
+                    "Long":"110.000583"
+                },
+				{
+                    "nama":"Kutoarjo", 
+                    "Lat":"-7.726044",
+                    "Long":"109.907126"
+                },
+				{
+                    "nama":"Kebumen", 
+                    "Lat":"-7.681909",
+                    "Long":"109.662123"
+                },
+				{
+                    "nama": "Karanganyar",
+                    "Lat": "-7.633169",
+                    "Long": "109.573493"
+                },
+				{
+                    "nama": "Gombong",
+                    "Lat": "-7.610921",
+                    "Long": "109.507770"
+                },
+				{
+                    "nama": "Kroya",
+                    "Lat": "-7.630120",
+                    "Long": "109.253538"
+                },
+				{
+                    "nama":"Kebasen", 
+                    "Lat":"-7.530256",
+                    "Long":"109.202989"
+                },
+                {
+                    "nama": "Notog",
+                    "Lat": "-7.485907",
+                    "Long": "109.253538"
+                },
+                {
+                    "nama": "Purwokerto",
+                    "Lat": "-7.419224",
+                    "Long": "109.221922"
+                }
+            ]
         }
     ]
 }
