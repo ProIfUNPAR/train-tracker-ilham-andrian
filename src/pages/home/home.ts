@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 
 import {
   GoogleMaps,
@@ -11,7 +11,7 @@ import {
   MarkerOptions,
   ILatLng
 } from '@ionic-native/google-maps';
-
+import { LocalNotifications } from '@ionic-native/local-notifications';
 import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { NgZone } from '@angular/core';
@@ -31,14 +31,25 @@ export class HomePage {
   Start: any;
   End: any;
   speed: any;
-  speedTrain: any = 45;
   distance: any;
   dtst: any;
   lat: any;
   lng: any;
   watch: any;
   eta: any;
-  keretaTujuan = 0;
+  resp: any;
+  desti: any
+
+  speedTrain: any = 45;
+  timestamp: any = [];
+  poslat: any = [];
+  poslong: any = [];
+
+  kereta = 0;
+  count = 0;
+  tujuan = 0;
+
+  gmLocation: { lat: number, lng: number } = { lat: -6.917464, lng: 107.619123 };
 
   //-----hardcode kereta---------//
   trains = [];
@@ -53,17 +64,23 @@ export class HomePage {
     public zone: NgZone,
     private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation,
+    private notif: LocalNotifications,
+    private platform: Platform,
     public http: Http) {
     this.loadJson();
+    this.speed = 0;
+    this.eta = 0;
+    this.distance = 0;
+    this.dtst = 0;
   }
 
   startTracking() {
     let config = {
-      desiredAccuracy: 0,
+      desiredAccuracy: 1000,
       stationaryRadius: 5,
       distanceFilter: 10,
       debug: true,
-      interval: 1000
+      interval: 500
     };
     this.backgroundGeolocation.configure(config).subscribe((location) => {
       this.zone.run(() => {
@@ -88,7 +105,6 @@ export class HomePage {
           this.lng = position.coords.longitude;
         });
       });
-
   }
 
   stopTracking() {
@@ -124,7 +140,22 @@ export class HomePage {
   //Load the map 
   initMap() {
     let element = this.mapElement.nativeElement;
-    this.map = this._googleMaps.create(element)
+    let time = new Date().getHours();
+    let style = [];
+
+    //Change Style to night between 7pm to 5am
+    if (this.isNight()) {
+      style = mapStyle
+    }
+
+    this.map = this._googleMaps.create(element, { styles: style });
+  }
+
+  isNight() {
+    //Returns true if the time is between
+    //7pm to 5am
+    let time = new Date().getHours();
+    return (time > 5 && time < 18) ? false : true;
   }
 
   //Get current user location
@@ -152,18 +183,122 @@ export class HomePage {
     return this.map.addMarker(markerOptions);
   }
 
+  addMarker(position) { // To Add Marker
+    this.map.clear();
+    this.addPolyLine();
+    var marker = this.map.addMarker({
+      position: position,
+      map: this.map
+    });
+  }
+
   addRoute() {
-    let stationstart: ILatLng = { lat: -6.914632, lng: 107.602438 };
-    let stationend: ILatLng = { lat: -6.176773, lng: 106.830636 };
-    let route: ILatLng[] = [stationstart, stationend];
+    this.addPolyLine();
+    this.getSpeed();
+    this.getETA();
+  }
+
+  addPolyLine() {
+    var route = new Array();
+    for (var j = 0; j < this.stations.length; j++) {
+      var pos = { lat: this.stations[j].Lat, lng: this.stations[j].Long };
+      route.push(pos);
+    }
     this.map.addPolyline({
       points: route,
       'color': '#ff0000',
       'width': 2.5,
       'geodesic': true
     });
-    this.dtst = this.getDistance(-6.914632, 107.602438, -6.176773, 106.830636);
-    this.eta = this.distance / this.speedTrain;
+
+  }
+
+  onLocateUser() {
+    this._geoLoc.watchPosition().subscribe((resp) => {
+      this.timestamp.push(new Date());
+
+      this.gmLocation.lat = resp.coords.latitude;
+      this.poslat.push(this.gmLocation.lat);
+      this.gmLocation.lng = resp.coords.longitude;
+      this.poslong.push(this.gmLocation.lng);
+
+      if (this.count > 0) {
+        var jarak = this.getDistance(this.poslat[this.count - 1], this.poslong[this.count - 1], this.poslat[this.count], this.poslong[this.count]);
+        var diff = (this.timestamp[this.count] - this.timestamp[this.count - 1]) / 1000;
+        this.speed = jarak * 3600 / (diff);
+        if (this.speed > 90) {
+          this.speed = 90;
+        }
+      }
+      this.count++;
+
+      const loc = new this.google.maps.LatLng(this.gmLocation.lat, this.gmLocation.lng);
+      this.distance = this.getDistance(this.gmLocation.lat, this.gmLocation.lng, this.stations[this.tujuan].Lat, this.stations[this.tujuan].Long);
+      this.dtst = this.getDistance(this.gmLocation.lat, this.gmLocation.lng, this.stations[this.tujuan].Lat, this.stations[this.tujuan].Long);
+      for (var z = this.tujuan; z < this.stations.length - 2; z++) {
+        this.dtst = this.dtst + this.getDistance(this.stations[z].Lat, this.stations[z].Long, this.stations[z + 1].Lat, this.stations[z + 1].Long);
+      }
+      if (this.speed < 38) {
+        this.eta = this.dtst / 38;
+      } else {
+        this.eta = this.dtst / this.speed;
+      }
+      if (this.distance < 0.1) {
+        if (this.tujuan < this.stations.length - 1) {
+          this.tujuan++;
+          this.notif.clearAll();
+          this.desti = this.stations[this.tujuan].nama;
+        } else {
+          this.desti = "Anda telah di statiun tujuan terakhir"
+          this.distance = "0km";
+          this.dtst = "0km";
+        }
+      }
+      else if (this.distance < 0.5) {
+        this.notif.clearAll();
+        this.alarmSampai();
+
+      } else if (this.distance < 0.7) {
+        this.alarmAkanSampai();
+      }
+    });
+  }
+
+  mulaiDariStatiun(statiun) {
+    for (var i = 0; i < this.stations.length; i++) {
+      if (statiun == this.stations[i].nama) {
+        this.tujuan = i;
+      }
+    }
+    if (this.tujuan < this.stations.length - 1) {
+      this.tujuan++;
+      this.desti = this.stations[this.tujuan].nama;
+    } else {
+      this.desti = "Anda telah di statiun tujuan terakhir"
+      this.distance = "0km";
+      this.dtst = "0km";
+    }
+    const stat = new this.google.maps.LatLng(this.stations[this.tujuan].Lat, this.stations[this.tujuan].Long);
+    this.addMarker(stat);
+    this.onLocateUser();
+  }
+
+  getJarakStatiunTerdekat() {
+    if (this.distance > 1) {
+      return Math.floor(this.distance) + " km";
+    }
+    else {
+      return Math.floor(this.distance * 1000) + " m";
+    }
+  }
+
+  getJarakStatiunAkhir() {
+    if (this.dtst > 1) {
+      return Math.floor(this.dtst) + " km";
+    }
+    else {
+      return Math.floor(this.dtst * 1000) + " m";
+    }
   }
 
   getDistance(lat1, lng1, lat2, lng2) {
@@ -180,6 +315,24 @@ export class HomePage {
     return dist;
   }
 
+  getETA() {
+    if (this.speed < 45) {
+      this.eta = this.dtst / 45;
+    } else {
+      this.eta = this.dtst / this.speed;
+    }
+    if (this.eta > 1) {
+      return Math.floor(this.eta) + " hour " + Math.floor((this.eta - (Math.floor(this.eta))) * 60) + " minute";
+    } else {
+      return Math.floor(this.eta * 60) + " minute";
+    }
+
+  }
+
+  getSpeed() {
+    return Math.floor(this.speed) + " kmh";
+  }
+
   loadJson() {
     this.http.get('./assets/data/train.json').map(res => res.json()).subscribe(data => {
       this.trains = data.trains;
@@ -189,8 +342,31 @@ export class HomePage {
   selectedStation(sTrain) {
     for (var i = 0; i < this.trains.length; i++) {
       if (sTrain == this.trains[i].name) {
+        this.kereta = i;
         this.stations = this.trains[i].station;
       }
     }
+  }
+
+  alarmAkanSampai() {
+    this.platform.ready().then(() => {
+      this.notif.schedule({
+        id: 1,
+        title: 'Alert',
+        text: 'Anda akan segera tiba di ' + this.stations[this.tujuan].nama,
+        trigger: { at: new Date(new Date().getTime() + 100) }
+      });
+    });
+  }
+
+  alarmSampai() {
+    this.platform.ready().then(() => {
+      this.notif.schedule({
+        id: 1,
+        title: 'Alert',
+        text: 'Anda telah tiba di ' + this.stations[this.tujuan].nama,
+        trigger: { at: new Date(new Date().getTime() + 100) }
+      });
+    });
   }
 }

@@ -11,9 +11,10 @@
         <ion-list>
           <ion-item>
             <ion-label>Dark Map: </ion-label>
-            <ion-toggle color="dark" checked="true"></ion-toggle>
+            <ion-toggle color="dark" checked="true" #color></ion-toggle>
           </ion-item>
         </ion-list>
+        <button ion-button full (click)="goTo(color.value)">Save</button>
       </ion-col>
     </ion-row>
   </ion-grid>
