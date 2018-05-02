@@ -6,6 +6,7 @@
 
 <ion-content>
   <div #map id="map" style="height:70%"></div>
+
   <div padding class="home">
     <ion-slides>
       <ion-slide>
@@ -32,14 +33,14 @@
       <ion-slide>
         <h4>Your Train Information</h4>
         <ion-list>
-          <ion-item> Speed : {{speed}} </ion-item>
-          <ion-item> Next stations : {{stasiunTujuan}} </ion-item>
-          <ion-item> Distance: {{getJarakStatiunTerdekat()}} </ion-item>
-          <ion-item> Distance to destination : {{getJarakStatiunAkhir()}} </ion-item>
+          <ion-item> Speed : {{getSpeed()}} </ion-item>
+          <ion-item> Distance to next station: {{distance}} </ion-item>
+          <ion-item> Distance to destination: {{getDestinationDistance()}} </ion-item>
           <ion-item> ETA: {{getETA()}} </ion-item>
         </ion-list>
       </ion-slide>
     </ion-slides>
   </div>
   <button ion-button full (click)="addRoute();">Track</button>
+
 </ion-content>
