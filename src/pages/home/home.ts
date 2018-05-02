@@ -21,7 +21,6 @@ import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http'
 
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -34,20 +33,19 @@ export class HomePage {
   speed: any;
   speedTrain: any = 45;
   distance: any;
+  dtst: any;
   lat: any;
   lng: any;
   watch: any;
   eta: any;
-  keretaTujuan=0;
-
+  keretaTujuan = 0;
 
   //-----hardcode kereta---------//
-  trains=[];
-  stations=[];
+  trains = [];
+  stations = [];
   public google: any;
   public sTrain: any;
   public sStation: any;
-
   //-----hardcode kereta (pindahin ke json)---------//
 
   constructor(public navCtrl: NavController,
@@ -55,8 +53,8 @@ export class HomePage {
     public zone: NgZone,
     private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation,
-    public  http:Http) {
-      this.loadJson();
+    public http: Http) {
+    this.loadJson();
   }
 
   startTracking() {
@@ -67,23 +65,16 @@ export class HomePage {
       debug: true,
       interval: 1000
     };
-
     this.backgroundGeolocation.configure(config).subscribe((location) => {
-
       this.zone.run(() => {
         this.lat = location.latitude;
         this.lng = location.longitude;
         this.speed = (location.speed * 3600) / 1000;
-
       });
-
     }, (err) => {
       console.log(err);
-
     });
-
     this.backgroundGeolocation.start();
-
     let options = {
       frequency: 1000,
       enableHighAccuracy: true
@@ -91,22 +82,19 @@ export class HomePage {
 
     this.watch = this._geoLoc.watchPosition(options).filter((p) => p.coords !== undefined)
       .subscribe((position: Geoposition) => {
-
         //console.log(position);
-
         this.zone.run(() => {
           this.lat = position.coords.latitude;
           this.lng = position.coords.longitude;
         });
-
       });
 
   }
+
   stopTracking() {
     console.log('stopTracking');
     this.backgroundGeolocation.finish();
     this.watch.unsubscribe();
-
   }
 
   ngAfterViewInit() {
@@ -136,23 +124,13 @@ export class HomePage {
   //Load the map 
   initMap() {
     let element = this.mapElement.nativeElement;
-
-    let timenow = new Date().getHours();
-    let style = [];
-
-    //Change Style to night between 7pm to 5am
-    if (this.isNight()) {
-      style = mapStyle
-    }
-
-    this.map = this._googleMaps.create(element, { styles: style })
+    this.map = this._googleMaps.create(element)
   }
 
   //Get current user location
   getLocation() {
     return this._geoLoc.getCurrentPosition();
   }
-
 
   //Moves the camera to any location
   moveCamera(loc: LatLng) {
@@ -171,7 +149,6 @@ export class HomePage {
       position: loc,
       title: title
     };
-
     return this.map.addMarker(markerOptions);
   }
 
@@ -185,15 +162,8 @@ export class HomePage {
       'width': 2.5,
       'geodesic': true
     });
-    this.distance = this.getDistance(-6.914632, 107.602438, -6.176773, 106.830636);
+    this.dtst = this.getDistance(-6.914632, 107.602438, -6.176773, 106.830636);
     this.eta = this.distance / this.speedTrain;
-  }
-
-  isNight() {
-    //Returns true if the time is between
-    //7pm to 5am
-    let timenow = new Date().getHours();
-    return (timenow > 5 && timenow < 19) ? false : true;
   }
 
   getDistance(lat1, lng1, lat2, lng2) {
@@ -211,22 +181,29 @@ export class HomePage {
   }
 
   loadJson() {
-        this.http.get('./assets/data/train.json').map(res => res.json()).subscribe(data => {
-        this.trains = data.trains;
-   });
+    this.http.get('./assets/data/train.json').map(res => res.json()).subscribe(data => {
+      this.trains = data.trains;
+    });
   }
 
+<<<<<<< HEAD
+  selectedStation(sTrain) {
+    for (var i = 0; i < this.trains.length; i++) {
+      if (sTrain.name = this.trains[i].name) {
+        this.stations = this.trains[i].station;
+      }
+    }
+  }
+}
+=======
  selectedStation(sTrain){
    for(var i = 0;i<this.trains.length;i++){
-      if(sTrain.name = this.trains[i].name){
+      if(sTrain == this.trains[i].name){
         this.stations = this.trains[i].station;
       }
    }
+   
  }
 
-
-
-
-
-  
 }
+>>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449

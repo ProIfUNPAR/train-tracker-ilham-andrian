@@ -83,7 +83,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.2.9">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCy8KBOUavRDOgUbENDcRW9XjL5Dnpii3M" />
         <variable name="PLAY_SERVICES_VERSION" value="12.0.0" />
@@ -101,4 +100,5 @@
         <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
     </plugin>
     <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

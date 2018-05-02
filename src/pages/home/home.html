@@ -5,29 +5,36 @@
 </ion-header>
 
 <ion-content>
-  <div #map id="map" style="height:70%;background-color: black"></div>
+  <div #map id="map" style="height:70%"></div>
 
-
-  <div padding>
+  <div padding class="home">
     <ion-slides>
       <ion-slide>
         <h4>See Your Train Route</h4>
         <ion-item>
           <ion-label floating>Kereta</ion-label>
-          <ion-select [(ngModel)]="sTrain"  (ion-change)="selectedStation(sTrain)">
+<<<<<<< HEAD
+          <ion-select [(ngModel)]="sTrain" (ion-change)="selectedStation(sTrain)">
+            <ion-option *ngFor="let item of trains" value="{{item.name}}">{{item.name}} </ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="trains">
+=======
+          <ion-select [(ngModel)]="sTrain"  (ionChange)="selectedStation(sTrain)">
             <ion-option  *ngFor="let item of trains" value="{{item.name}}">{{item.name}} </ion-option>
           </ion-select>
         </ion-item>
-        <ion-item *ngIf="stations">
+        <ion-item >
+>>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
           <ion-label floating>Stasiun Keberangakatan</ion-label>
-          <ion-select >
-            <ion-option  *ngFor="let item1 of stations" value="{{item1.name}}">{{item1.name}}</ion-option>
+          <ion-select>
+            <ion-option *ngFor="let item of stations" value="{{item.name}}">{{item.name}}</ion-option>
           </ion-select>
         </ion-item>
-        <ion-item >
+        <ion-item>
           <ion-label floating>Stasiun Akhir</ion-label>
-          <ion-select (ionChange)="setCityValues(sStation)" [(ngModel)]="sStation">
-            <ion-option [value]="sStation" *ngFor="let sStation of selectedStations">{{sStation.name}}</ion-option>
+          <ion-select >
+            <ion-option *ngFor="let item2 of stations" value="{{item2.name}}">{{item2.name}}</ion-option>
           </ion-select>
         </ion-item>
       </ion-slide>
