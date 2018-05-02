@@ -205,5 +205,9 @@ export class HomePage {
    
  }
 
+<<<<<<< HEAD
+}
+>>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
+=======
 }
 >>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
