@@ -15,8 +15,11 @@ import {
 import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { NgZone } from '@angular/core';
+import { LocalNotifications } from '@ionic-native/local-notifications'
 import { mapStyle } from './mapStyle';
 import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-home',
@@ -34,6 +37,7 @@ export class HomePage {
   lng: any;
   watch: any;
   eta: any;
+  http:HttpClient;
 
   //-----hardcode kereta---------//
   public trains: any[];
@@ -466,6 +470,7 @@ export class HomePage {
   setCityValues(sStation) {
     this.selectedCities = this.cities.filter(city => city.station_id == sStation.id);
   }
-}
 
-//--
+  
+
+}
