@@ -51,6 +51,7 @@ export class HomePage {
   latLangAkhir: ILatLng;
   temp: ILatLng;
   public selectedStations: any = [];
+  public newAddf: any = [];
 
   //-----hardcode kereta---------//
   trains = [];
@@ -182,6 +183,11 @@ export class HomePage {
     return this.map.addMarker(markerOptions);
   }
 
+  clear() {
+    this.map.clear();
+    this.selectedStations = this.newAddf;
+  }
+
   addRoute() {
     let stationstart: ILatLng = this.Start;
     let stationend: ILatLng = this.End;
@@ -263,8 +269,8 @@ export class HomePage {
     return Math.floor(this.speed) + " kmh";
   }
 
-  getNextStations(){
-    return this.selectedStation[this.startp+1];
+  getNextStations() {
+    return this.selectedStation[this.startp + 1];
   }
 
   getDestinationDistance() {

@@ -87,6 +87,7 @@
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCy8KBOUavRDOgUbENDcRW9XjL5Dnpii3M" />
         <variable name="PLAY_SERVICES_VERSION" value="12.0.0" />
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
+        <variable name="API_KEY_FOR_IOS" value="(API_KEY_FOR_IOS)" />
     </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
     <plugin name="cordova-plugin-mauron85-background-geolocation" spec="^2.3.5">
@@ -100,6 +101,6 @@
         <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
     </plugin>
     <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
-    <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
+    <engine name="android" spec="7.0.0" />
 </widget>
