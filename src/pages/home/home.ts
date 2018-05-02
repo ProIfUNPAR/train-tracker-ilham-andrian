@@ -63,12 +63,14 @@ export class HomePage {
     public zone: NgZone,
     private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation,
-    public http: Http) {
+    public http: Http,
+    public backgroundMode:BackgroundMode) {
     this.loadJson();
     this.speed = 0;
     this.eta = 0;
     this.distance = 0;
     this.dtst = 0;
+    this.backgroundMode.enable();
   }
 
   startTracking() {
@@ -283,4 +285,7 @@ export class HomePage {
       }
     }
   }
+
+
+  
 }
