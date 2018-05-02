@@ -18,13 +18,13 @@
         </ion-item>
         <ion-item>
           <ion-label floating>Stasiun Keberangakatan</ion-label>
-          <ion-select>
+          <ion-select [(ngModel)]="item" (ionChange)="getLatLangAwal(item)">
             <ion-option *ngFor="let item of stations" value="{{item.name}}">{{item.name}}</ion-option>
           </ion-select>
         </ion-item>
         <ion-item>
           <ion-label floating>Stasiun Akhir</ion-label>
-          <ion-select>
+          <ion-select [(ngModel)]="item2" (ionChange)="getLatLangAkhir(item2)">
             <ion-option *ngFor="let item2 of stations" value="{{item2.name}}">{{item2.name}}</ion-option>
           </ion-select>
         </ion-item>
