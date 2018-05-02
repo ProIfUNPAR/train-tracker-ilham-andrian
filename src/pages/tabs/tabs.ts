@@ -10,15 +10,8 @@ import { SettingsPage } from '../settings/settings';
 export class TabsPage {
 
   tab1Root = HomePage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  tab3Root = AboutPage;
-  tab2Root = SettingsPage;
-=======
-=======
->>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
   tab3Root = ContactPage;
->>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
+  tab2Root = SettingsPage;
 
   constructor() {
 

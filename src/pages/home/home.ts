@@ -186,28 +186,11 @@ export class HomePage {
     });
   }
 
-<<<<<<< HEAD
   selectedStation(sTrain) {
     for (var i = 0; i < this.trains.length; i++) {
-      if (sTrain.name = this.trains[i].name) {
+      if (sTrain == this.trains[i].name) {
         this.stations = this.trains[i].station;
       }
     }
   }
 }
-=======
- selectedStation(sTrain){
-   for(var i = 0;i<this.trains.length;i++){
-      if(sTrain == this.trains[i].name){
-        this.stations = this.trains[i].station;
-      }
-   }
-   
- }
-
-<<<<<<< HEAD
-}
->>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
-=======
-}
->>>>>>> 085d0c3120a3cef9cf747f58aed8054a32d8f449
