@@ -43,8 +43,12 @@ export class HomePage {
   keretaTujuan = 0;
 
   item: any;
+  startp: any;
+  endp: any;
   latLangAwal: ILatLng;
   latLangAkhir: ILatLng;
+  temp: ILatLng;
+  public selectedStations: any = [];
 
   //-----hardcode kereta---------//
   trains = [];
@@ -179,7 +183,17 @@ export class HomePage {
   addRoute() {
     let stationstart: ILatLng = this.Start;
     let stationend: ILatLng = this.End;
-    let route: ILatLng[] = [stationstart, stationend];
+    if (this.startp < this.endp) {
+      for (var i = this.startp; i <= this.endp; i++) {
+        this.selectedStations.push(this.temp = { lat: this.stations[i].Lang, lng: this.stations[i].Long });
+      }
+    } else {
+      for (var i = this.endp; i >= this.startp; i--) {
+        this.selectedStations.push(this.temp = { lat: this.stations[i].Lang, lng: this.stations[i].Long });
+      }
+    }
+
+    let route: ILatLng[] = this.selectedStations;
     this.map.addPolyline({
       points: route,
       'color': '#ff0000',
@@ -198,6 +212,7 @@ export class HomePage {
   getLatLangAwal(item) {
     for (var i = 0; i < this.stations.length; i++) {
       if (item == this.stations[i].name) {
+        this.startp = i;
         this.Start = this.latLangAwal = { lat: this.stations[i].Lang, lng: this.stations[i].Long };
       }
     }
@@ -207,6 +222,7 @@ export class HomePage {
   getLatLangAkhir(item2) {
     for (var i = 0; i < this.stations.length; i++) {
       if (item2 == this.stations[i].name) {
+        this.endp = i;
         this.End = this.latLangAkhir = { lat: this.stations[i].Lang, lng: this.stations[i].Long };
       }
     }
