@@ -9,7 +9,8 @@ import {
   GoogleMapsEvent,
   Marker,
   MarkerOptions,
-  ILatLng
+  ILatLng,
+  Polyline
 } from '@ionic-native/google-maps';
 
 import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
@@ -30,6 +31,7 @@ import { HttpModule } from '@angular/http'
 export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: GoogleMap;
+  poly: Polyline;
   Start: any;
   End: any;
   speed: any;
@@ -259,6 +261,10 @@ export class HomePage {
 
   getSpeed() {
     return Math.floor(this.speed) + " kmh";
+  }
+
+  getNextStations(){
+    return this.selectedStation[this.startp+1];
   }
 
   getDestinationDistance() {
