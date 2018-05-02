@@ -1,5 +1,9 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+<<<<<<< HEAD
 import { NavController, NavParams, Platform } from 'ionic-angular';
+=======
+import { NavController, Platform } from 'ionic-angular';
+>>>>>>> e1a1ae5c4bb7c4665b0cdb0c0991e46e2a2a0b30
 
 import {
   GoogleMaps,
@@ -20,6 +24,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http'
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 
 @Component({
   selector: 'page-home',
@@ -37,6 +43,7 @@ export class HomePage {
   lng: any;
   watch: any;
   eta: any;
+<<<<<<< HEAD
   resp: any;
   desti: any
 
@@ -50,6 +57,12 @@ export class HomePage {
   tujuan = 0;
 
   gmLocation: { lat: number, lng: number } = { lat: -6.917464, lng: 107.619123 };
+=======
+  keretaTujuan = 0;
+  item:any;
+  latLangAwal : ILatLng;
+  latLangAkhir : ILatLng;
+>>>>>>> e1a1ae5c4bb7c4665b0cdb0c0991e46e2a2a0b30
 
   //-----hardcode kereta---------//
   trains = [];
@@ -64,9 +77,14 @@ export class HomePage {
     public zone: NgZone,
     private _googleMaps: GoogleMaps,
     private _geoLoc: Geolocation,
+<<<<<<< HEAD
     private notif: LocalNotifications,
     private platform: Platform,
     public http: Http) {
+=======
+    public http: Http
+    ) {
+>>>>>>> e1a1ae5c4bb7c4665b0cdb0c0991e46e2a2a0b30
     this.loadJson();
     this.speed = 0;
     this.eta = 0;
@@ -348,6 +366,7 @@ export class HomePage {
     }
   }
 
+<<<<<<< HEAD
   alarmAkanSampai() {
     this.platform.ready().then(() => {
       this.notif.schedule({
@@ -369,4 +388,42 @@ export class HomePage {
       });
     });
   }
+=======
+  getLatLangAwal(item){
+    for(var i=0;i<this.stations.length;i++){
+      if(item==this.stations[i].name){
+        this.latLangAwal = {lat : this.stations[i].Lang, lng : this.stations[i].Long};
+      }
+    }
+    console.log(this.latLangAwal);
+  }
+
+  getLatLangAkhir(item2){
+    for(var i=0;i<this.stations.length;i++){
+      if(item2==this.stations[i].name){
+        this.latLangAkhir = {lat : this.stations[i].Lang, lng : this.stations[i].Long};
+      }
+    }
+    console.log(this.latLangAkhir);
+  }
+
+  // alertMessage(){
+  //   this.platform.ready().then( () => {
+  //     if(this.distance>100 && this.distance<500){
+  //       this.localNotification.schedule({
+  //         id: 1,
+  //         title: 'Notif',
+  //         text : 'Bersiap, anda akan segera tiba di ' + this.stations[this.keretaTujuan].nama,
+  //       });
+  //     }
+  //     else{
+  //       this.localNotification.schedule({
+  //         id: 1,
+  //         title: 'Notif',
+  //         text : 'Anda sudah sampai di ' + this.stations[this.keretaTujuan].nama,
+  //       });
+  //     }
+  //   });
+  // }
+>>>>>>> e1a1ae5c4bb7c4665b0cdb0c0991e46e2a2a0b30
 }
