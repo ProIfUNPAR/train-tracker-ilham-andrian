@@ -218,15 +218,11 @@ export class HomePage {
 
  selectedStation(sTrain){
    for(var i = 0;i<this.trains.length;i++){
-      if(sTrain.name = this.trains[i].name){
+      if(sTrain == this.trains[i].name){
         this.stations = this.trains[i].station;
       }
    }
+   
  }
 
-
-
-
-
-  
 }

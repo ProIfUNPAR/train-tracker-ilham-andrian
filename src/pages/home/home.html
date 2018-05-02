@@ -11,11 +11,11 @@
         <h4>See Your Train Route</h4>
         <ion-item>
           <ion-label floating>Kereta</ion-label>
-          <ion-select [(ngModel)]="sTrain"  (ion-change)="selectedStation(sTrain)">
+          <ion-select [(ngModel)]="sTrain"  (ionChange)="selectedStation(sTrain)">
             <ion-option  *ngFor="let item of trains" value="{{item.name}}">{{item.name}} </ion-option>
           </ion-select>
         </ion-item>
-        <ion-item *ngIf="stations">
+        <ion-item >
           <ion-label floating>Stasiun Keberangakatan</ion-label>
           <ion-select >
             <ion-option  *ngFor="let item1 of stations" value="{{item1.name}}">{{item1.name}}</ion-option>
@@ -23,8 +23,8 @@
         </ion-item>
         <ion-item >
           <ion-label floating>Stasiun Akhir</ion-label>
-          <ion-select (ionChange)="setCityValues(sStation)" [(ngModel)]="sStation">
-            <ion-option [value]="sStation" *ngFor="let sStation of selectedStations">{{sStation.name}}</ion-option>
+          <ion-select >
+            <ion-option *ngFor="let item2 of stations" value="{{item2.name}}">{{item2.name}}</ion-option>
           </ion-select>
         </ion-item>
       </ion-slide>
