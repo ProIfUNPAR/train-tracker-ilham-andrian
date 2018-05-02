@@ -11,8 +11,8 @@
         <h4>See Your Train Route</h4>
         <ion-item>
           <ion-label floating>Kereta</ion-label>
-          <ion-select (ionChange)="setDistrictValues(sTrain)" [(ngModel)]="sTrain">
-            <ion-option [value]="sTrain" *ngFor="let sTrain of trains">{{sTrain.name}} </ion-option>
+          <ion-select  (ion-change)="onChange(sTrain)" [(ngModel)]="sTrain">
+            <ion-option  *ngFor="let sTrains of trains" value="{{sTrains.name}}">{{sTrains.name}} </ion-option>
           </ion-select>
         </ion-item>
         <ion-item *ngIf="selectedStations">
@@ -43,9 +43,3 @@
   <div #map id="map" style="height:90%"></div>
 
 </ion-content>
-
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> master
